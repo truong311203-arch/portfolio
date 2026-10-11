@@ -25,3 +25,5 @@ jobs:
 
       - name: Awaken System Update
         uses: billtruong003/git-profile-awaken@main
+        with:
+          token: ${{ secrets.AWAKEN_TOKEN || github.token }}
