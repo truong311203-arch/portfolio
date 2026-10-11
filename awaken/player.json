@@ -1,33 +1,33 @@
 {
   "login": "truong311203-arch",
-  "level": 2,
-  "overall": "E",
-  "overallPercentile": 0.3987788916428766,
+  "level": 9,
+  "overall": "C",
+  "overallPercentile": 0.6623970397224503,
   "layout": "default",
   "class": {
-    "name": "Novice",
-    "element": "Neutral",
-    "from": null
+    "name": "Grand Magus",
+    "element": "Arcane",
+    "from": "Python"
   },
   "title": "Night Owl",
   "stats": [
     {
       "code": "STR",
-      "value": 2,
+      "value": 8,
       "rank": "E",
-      "percentile": 0.06912665605202337
+      "percentile": 0.1577504689141393
     },
     {
       "code": "AGI",
-      "value": 1,
-      "rank": "C",
-      "percentile": 0.6451754090724036
+      "value": 56,
+      "rank": "S",
+      "percentile": 0.965927584594461
     },
     {
       "code": "INT",
-      "value": 0,
-      "rank": "E",
-      "percentile": 0
+      "value": 1,
+      "rank": "B",
+      "percentile": 0.7872854778967882
     },
     {
       "code": "VIT",
@@ -48,32 +48,89 @@
       "percentile": 0
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "kind": "level",
+      "subject": "Level",
+      "from": "2",
+      "to": "9",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "overall",
+      "subject": "Overall rank",
+      "from": "E",
+      "to": "C",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "stat",
+      "subject": "AGI",
+      "from": "C",
+      "to": "S",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "stat",
+      "subject": "INT",
+      "from": "E",
+      "to": "B",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "achievement",
+      "subject": "pull-shark",
+      "from": "0",
+      "to": "2",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "achievement",
+      "subject": "quickdraw",
+      "from": "1",
+      "to": "2",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "achievement",
+      "subject": "yolo",
+      "from": "1",
+      "to": "2",
+      "at": "2026-10-11T15:55:53.629Z"
+    },
+    {
+      "kind": "achievement",
+      "subject": "unbroken",
+      "from": "0",
+      "to": "1",
+      "at": "2026-10-11T15:55:53.629Z"
+    }
+  ],
   "achievements": [
     {
       "id": "pull-shark",
-      "tier": 0,
-      "value": 1
+      "tier": 2,
+      "value": 45
     },
     {
       "id": "quickdraw",
-      "tier": 1,
-      "value": 1
+      "tier": 2,
+      "value": 12
     },
     {
       "id": "yolo",
-      "tier": 1,
-      "value": 1
+      "tier": 2,
+      "value": 21
     },
     {
       "id": "relentless",
       "tier": 0,
-      "value": 2
+      "value": 8
     },
     {
       "id": "unbroken",
-      "tier": 0,
-      "value": 6
+      "tier": 1,
+      "value": 18
     },
     {
       "id": "night-owl",
@@ -97,13 +154,13 @@
     },
     {
       "id": "raider",
-      "tier": 1,
-      "value": 1
+      "tier": 2,
+      "value": 43
     },
     {
       "id": "flawless",
-      "tier": 0,
-      "value": 0
+      "tier": 1,
+      "value": 80
     },
     {
       "id": "healer",
@@ -112,8 +169,8 @@
     },
     {
       "id": "polyglot",
-      "tier": 0,
-      "value": 0
+      "tier": 1,
+      "value": 4
     },
     {
       "id": "star-collector",
@@ -137,13 +194,13 @@
     },
     {
       "id": "berserker",
-      "tier": 0,
-      "value": 2
+      "tier": 1,
+      "value": 22
     },
     {
       "id": "diligent",
-      "tier": 0,
-      "value": 29
+      "tier": 1,
+      "value": 51
     },
     {
       "id": "daily-grinder",
@@ -192,5 +249,5 @@
     "escapes": 0,
     "kinds": []
   },
-  "syncedAt": "2026-10-11T15:26:07.007Z"
+  "syncedAt": "2026-10-11T15:55:53.629Z"
 }
