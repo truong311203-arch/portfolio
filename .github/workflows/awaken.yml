@@ -1,0 +1,27 @@
+name: Awaken
+
+on:
+  schedule:
+    # 00:10 UTC+7 (17:10 UTC daily)
+    - cron: "10 17 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [awaken.json]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: awaken
+  cancel-in-progress: true
+
+jobs:
+  awaken:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Awaken System Update
+        uses: billtruong003/git-profile-awaken@main

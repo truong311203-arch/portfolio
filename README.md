@@ -1,0 +1,105 @@
+<div align="center">
+
+# ⚔️ [ SYSTEM NOTIFICATION ] ⚔️
+### **YOU HAVE BEEN CHOSEN AS A PLAYER**
+
+<p>
+  <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=600&size=22&duration=3000&pause=1000&color=3FD6F0&center=true&vCenter=true&width=600&lines=Welcome+Hunter+truong311203-arch;Class%3A+Software+Engineer+%2F+AI+Agent+Developer;Leveling+up+every+single+day...;System+Status%3A+ONLINE" alt="Typing SVG" />
+</p>
+
+</div>
+
+---
+
+<!-- AWAKEN:START -->
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="awaken/hunter-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="awaken/hunter-light.svg">
+  <img src="awaken/hunter-dark.svg" width="100%" alt="Hunter License">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="awaken/ladder-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="awaken/ladder-light.svg">
+  <img src="awaken/ladder-dark.svg" width="100%" alt="Rank Ladder">
+</picture>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="awaken/web-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="awaken/web-light.svg">
+    <img src="awaken/web-dark.svg" width="49%" alt="Stat Web">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="awaken/skills-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="awaken/skills-light.svg">
+    <img src="awaken/skills-dark.svg" width="49%" alt="Mastery Skills">
+  </picture>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="awaken/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="awaken/activity-light.svg">
+  <img src="awaken/activity-dark.svg" width="100%" alt="ARISE - Shadow Army Activity">
+</picture>
+
+</div>
+<!-- AWAKEN:END -->
+
+---
+
+### 🛡️ Player Profile & Information
+
+```yaml
+Name: Trần Duy Trường
+Alias: truong311203-arch
+Class: AI & Software Engineer
+Main Focus: Autonomous Agents, LLM Applications, Data Pipelines, Systems
+Location: Vietnam (UTC+7)
+Status: "Continuously training in dungeons and grinding knowledge"
+```
+
+---
+
+### 🎒 Arsenal & Inventory (Tech Stack)
+
+<div align="center">
+
+| Category | Arsenal |
+|:---|:---|
+| **Core Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white) |
+| **AI & Data Science** | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white) |
+| **DevOps & Infrastructure** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) |
+
+</div>
+
+---
+
+### 📜 Active Quests & Milestones
+
+- [x] **Gate Opener:** Awaken GitHub Profile into a LitRPG System window.
+- [ ] **Shadow Extraction:** Complete 365 days of code contributions without breaking the streak.
+- [ ] **Raid Boss Slayer:** Build and deploy scalable Agentic AI workflows with Human-in-the-Loop.
+- [ ] **Grandmaster:** Contribute to high-impact open-source repositories.
+
+---
+
+### 📬 Guild Contacts
+
+<div align="center">
+
+<a href="mailto:truong311203@gmail.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+&nbsp;
+<a href="https://github.com/truong311203-arch">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+
+<br><br>
+
+*"Only those who continuously grind become Monarchs."*
+
+</div>
