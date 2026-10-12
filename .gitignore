@@ -5,5 +5,7 @@ Thumbs.db
 # Logs
 *.log
 
-# Node
+# Node & Vercel
 node_modules/
+.vercel/
+README_PROFILE.md
