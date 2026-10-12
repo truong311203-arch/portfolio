@@ -1,183 +1,227 @@
 /**
- * PORTFOLIO CLIENT INTERACTION ENGINE
- * Author: Trần Duy Trường (truong311203-arch)
+ * Portfolio interactions
+ * Author: Trần Duy Trường
  */
 
+const CONTACT_EMAIL = 'truong311203@gmail.com';
+
 document.addEventListener('DOMContentLoaded', () => {
-  initNavbarScroll();
+  initNavbar();
+  initMobileMenu();
   initTerminal();
   initProjectFilters();
   initCopyEmail();
   initContactForm();
   initCounterAnimation();
-  initMobileMenu();
 });
 
+const prefersReducedMotion = () =>
+  window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /* -------------------------------------------------------------
- * 1. Navbar Scroll & Active Link Observer
+ * 1. Navbar: background on scroll + scrollspy
  * ------------------------------------------------------------- */
-function initNavbarScroll() {
+function initNavbar() {
   const navbar = document.querySelector('.navbar');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
+  if (!navbar) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.style.background = 'rgba(8, 11, 17, 0.92)';
-      navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.4)';
-    } else {
-      navbar.style.background = 'var(--bg-glass)';
-      navbar.style.boxShadow = 'none';
-    }
+  let ticking = false;
 
-    // Scrollspy
+  const update = () => {
+    ticking = false;
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+
     let current = '';
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.offsetHeight;
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
+      const top = section.offsetTop - 120;
+      if (window.scrollY >= top && window.scrollY < top + section.offsetHeight) {
+        current = section.id;
       }
     });
 
     navLinks.forEach((link) => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
+      link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
-  });
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+
+  update();
 }
 
 /* -------------------------------------------------------------
- * 2. Mobile Menu Toggle
+ * 2. Mobile menu
  * ------------------------------------------------------------- */
 function initMobileMenu() {
-  const btn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-  if (!btn || !navLinks) return;
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('nav-menu');
+  if (!btn || !menu) return;
 
-  btn.addEventListener('click', () => {
-    const isVisible = navLinks.style.display === 'flex';
-    if (isVisible) {
-      navLinks.style.display = 'none';
-    } else {
-      navLinks.style.display = 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '72px';
-      navLinks.style.left = '0';
-      navLinks.style.width = '100%';
-      navLinks.style.background = '#0e131f';
-      navLinks.style.padding = '1.5rem';
-      navLinks.style.borderBottom = '1px solid var(--border-subtle)';
-    }
+  const setOpen = (open) => {
+    menu.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  };
+
+  btn.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
   });
 }
 
 /* -------------------------------------------------------------
- * 3. Interactive Developer CLI Terminal
+ * 3. Terminal
+ *    Output strings are static, trusted HTML; user input is only
+ *    ever echoed through textContent.
  * ------------------------------------------------------------- */
 function initTerminal() {
   const input = document.getElementById('terminal-input');
   const output = document.getElementById('terminal-output');
+  const body = document.querySelector('.terminal-body');
   if (!input || !output) return;
 
   const history = [];
   let historyIndex = -1;
 
+  const cmdName = (name) => `<span style="color:#f8fafc">${name}</span>`;
+  const link = (href, text) =>
+    `<a class="terminal-link" href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+  const GH = 'https://github.com/tranduytruong12';
+
   const commands = {
     help: () => `
-<span class="accent-text">Available commands:</span>
-  • <span style="color:#f8fafc">about</span>       - Brief overview & engineering focus
-  • <span style="color:#f8fafc">skills</span>      - Tech stack arsenal & competencies
-  • <span style="color:#f8fafc">projects</span>    - Featured production systems
-  • <span style="color:#f8fafc">contact</span>     - Guild contact & social links
-  • <span style="color:#f8fafc">neofetch</span>    - System architecture & runtime spec
-  • <span style="color:#f8fafc">arise</span>       - Solo Leveling Easter Egg
-  • <span style="color:#f8fafc">clear</span>       - Clear terminal output
-`,
+<p class="accent-text">Available commands:</p>
+<p>  ${cmdName('about')}      who I am and what I do</p>
+<p>  ${cmdName('projects')}   the work I'm happiest to be judged on</p>
+<p>  ${cmdName('skills')}     tools I use, grouped by area</p>
+<p>  ${cmdName('education')}  degree, program, publication</p>
+<p>  ${cmdName('experience')} internships</p>
+<p>  ${cmdName('github')}     both GitHub accounts</p>
+<p>  ${cmdName('contact')}    how to reach me</p>
+<p>  ${cmdName('neofetch')}   system summary</p>
+<p>  ${cmdName('arise')}      easter egg</p>
+<p>  ${cmdName('clear')}      clear the screen</p>`,
+
     about: () => `
-<p><strong>Trần Duy Trường (truong311203-arch)</strong></p>
-<p>Role: AI & Software Engineer</p>
-<p>Focus: Autonomous Agent Frameworks, Real-time RAG Pipelines, Distributed Systems, High-performance C++ & Python Backends.</p>
-<p>Location: Vietnam (UTC+7) | Continually grinding knowledge & engineering depth.</p>
-`,
-    skills: () => `
-<p><span class="accent-text">[Core Languages]</span> Python, C++, JavaScript/TypeScript, SQL, Shell/Bash</p>
-<p><span class="accent-text">[AI Systems]</span> PyTorch, LangChain, Multi-Agent Systems, RAG, Qdrant/Pinecone, HuggingFace</p>
-<p><span class="accent-text">[Backends]</span> FastAPI, Node.js, Redis, PostgreSQL, Distributed Task Queues</p>
-<p><span class="accent-text">[DevOps]</span> Docker, Linux/Unix, Git, GitHub Actions, Vercel</p>
-`,
+<p><strong>Trần Duy Trường</strong> — AI/ML engineer, Hanoi (UTC+7)</p>
+<p>CS graduate (HCMUT, 2025). I build grounded RAG systems, evaluate them with golden benchmarks, and co-authored a MIWAI 2025 paper on EEG classification.</p>
+<p>Currently AI Engineer Intern at VinSmart Future. Looking for an AI/ML Engineer role.</p>`,
+
     projects: () => `
-<p>1. <strong>NexusAgent</strong> - Autonomous Multi-Agent Orchestrator (LangGraph, FastAPI)</p>
-<p>2. <strong>Aether</strong> - Vector Search & Hybrid RAG Engine (PyTorch, Qdrant)</p>
-<p>3. <strong>Kestrel</strong> - High-Throughput Distributed Task Queue (C++, Redis)</p>
-<p>4. <strong>Git Profile Awaken</strong> - LitRPG gamification profile engine (Actions, SVG)</p>
-`,
+<p>1. <strong>GPTResident</strong> — grounded multi-tenant RAG, 201-case golden benchmark
+   ${link('https://cudan.me/', '[live]')}</p>
+<p>2. <strong>FA-GPNet</strong> — motor-imagery EEG classification, MIWAI 2025 (Springer LNAI)</p>
+<p>3. <strong>Multi-Agent RAG Customer Support</strong> — LangGraph, LlamaIndex, ChromaDB
+   ${link(`${GH}/RAG-multi-agents-system`, '[repo]')}</p>
+<p>4. <strong>Qwen3.5-4B Coding &amp; Reasoning Fine-tune</strong> — Unsloth, QLoRA
+   ${link(`${GH}/Qwen3.5-4B-Coding`, '[repo]')}</p>`,
+
+    skills: () => `
+<p><span class="accent-text">[Languages]</span> Python, C++, SQL, JavaScript</p>
+<p><span class="accent-text">[LLMs &amp; agents]</span> LangGraph, LangChain, LlamaIndex, OpenAI API, LLM-as-judge</p>
+<p><span class="accent-text">[RAG]</span> pgvector, PostgreSQL FTS, ChromaDB, weighted RRF, HyDE, MinerU OCR</p>
+<p><span class="accent-text">[ML]</span> PyTorch, Scikit-learn, OpenCV, SFT, LoRA/QLoRA, quantization</p>
+<p><span class="accent-text">[Backend]</span> FastAPI, Node.js/Express, PostgreSQL, MySQL, React, Next.js</p>
+<p><span class="accent-text">[Platform]</span> Docker, GitHub CI/CD, Ruff, Mypy (+ Terraform, lakehouse in labs)</p>`,
+
+    education: () => `
+<p>• <strong>B.Sc. Computer Science</strong>, HCMUT (VNU-HCM) — GPA 3.3/4.0, 11/2025</p>
+<p>• Thesis: Motor Imagery Classification from EEG Signals (97.5/100)</p>
+<p>• <strong>Vingroup AI Talent Training Program</strong>, Cohort 3 — Track 2: AI &amp; Data Infrastructure (VinUniversity)</p>
+<p>• Publication: co-author, MIWAI 2025 proceedings (Springer LNAI) · TOEIC 840/990</p>`,
+
+    experience: () => `
+<p>• <strong>AI Engineer Intern</strong> — VinSmart Future (Vingroup), GSM division · 08/2026 – 10/2026</p>
+<p>• <strong>Software Engineer Intern</strong> — Xuan Cuong Technology Trading &amp; Services · 02/2025 – 05/2025</p>`,
+
+    github: () => `
+<p>• projects: ${link(GH, 'github.com/tranduytruong12')}</p>
+<p>• AI20K labs: ${link('https://github.com/truong311203-arch', 'github.com/truong311203-arch')}</p>`,
+
     contact: () => `
-<p>• Email: <a href="mailto:truong311203@gmail.com" style="color:#38bdf8">truong311203@gmail.com</a></p>
-<p>• GitHub: <a href="https://github.com/truong311203-arch" target="_blank" style="color:#38bdf8">github.com/truong311203-arch</a></p>
-`,
+<p>• Email: <a class="terminal-link" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>
+<p>• GitHub: ${link(GH, 'tranduytruong12')} · ${link('https://github.com/truong311203-arch', 'truong311203-arch')}</p>`,
+
     neofetch: () => `
-<pre style="color:#a5b4fc; font-family:var(--font-mono); font-size:0.8rem; line-height:1.2;">
-   .---.       OS: Linux / Arch / Ubuntu LTS
-  /     \\      HOST: AI Systems Workstation
- | () () |     ENGINEER: Trần Duy Trường (truong311203-arch)
-  \\  _  /      CLASS: AI & Software Engineer
-   \`---\`       STATUS: Online & Open for Collaborations
-               UPTIME: Leveling up daily
-</pre>
-`,
+<pre class="terminal-pre">
+   .---.       NAME: Trần Duy Trường
+  /     \\      ROLE: AI/ML engineer (intern, VSF)
+ | () () |     FOCUS: grounded RAG · LLM evaluation
+  \\  _  /      DEGREE: BSc CS, HCMUT (2025)
+   \`---\`       OS: Windows 11
+               LOCATION: Hanoi, Vietnam (UTC+7)
+</pre>`,
+
+    whoami: () => '<p>guest — a visitor. Welcome!</p>',
+
     arise: () => `
 <p style="color:#a855f7; font-weight:bold;">⚔️ [ SYSTEM: SHADOW EXTRACTION INITIATED ]</p>
 <p><em>"Only those who continuously grind become Monarchs."</em></p>
-<p style="color:#38bdf8">Hunter truong311203-arch has awakened his shadow army of AI agents!</p>
-`,
-    whoami: () => `<p>Visitor / Engineer seeking high-impact solutions.</p>`,
+<p style="color:#38bdf8">(The GitHub profile README runs on a Solo Leveling theme — this is its nod.)</p>`,
+
     clear: () => {
       output.innerHTML = '';
       return '';
-    }
+    },
+  };
+
+  const append = (el) => {
+    output.appendChild(el);
+    if (body) body.scrollTop = body.scrollHeight;
   };
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-      const rawVal = input.value.trim();
-      if (!rawVal) return;
+      const raw = input.value.trim();
+      if (!raw) return;
 
-      history.push(rawVal);
+      history.push(raw);
       historyIndex = history.length;
 
-      const cmd = rawVal.toLowerCase();
       const promptLine = document.createElement('div');
-      promptLine.innerHTML = `<span class="terminal-prompt">guest@truong311203:~$</span> <span>${escapeHtml(rawVal)}</span>`;
-      output.appendChild(promptLine);
+      const prompt = document.createElement('span');
+      prompt.className = 'terminal-prompt';
+      prompt.textContent = 'guest@truong311203:~$';
+      const typed = document.createElement('span');
+      typed.textContent = ` ${raw}`;
+      promptLine.append(prompt, typed);
+      append(promptLine);
 
-      if (commands[cmd]) {
-        const res = commands[cmd]();
-        if (res) {
-          const resEl = document.createElement('div');
-          resEl.innerHTML = res;
-          output.appendChild(resEl);
+      const handler = Object.prototype.hasOwnProperty.call(commands, raw.toLowerCase())
+        ? commands[raw.toLowerCase()]
+        : null;
+
+      const result = document.createElement('div');
+      if (handler) {
+        const html = handler();
+        if (html) {
+          result.innerHTML = html;
+          append(result);
         }
       } else {
-        const errorEl = document.createElement('div');
-        errorEl.innerHTML = `<span style="color:#f87171">Command not found: "${escapeHtml(rawVal)}". Type 'help' for available commands.</span>`;
-        output.appendChild(errorEl);
+        const err = document.createElement('span');
+        err.style.color = '#f87171';
+        err.textContent = `Command not found: "${raw}". Type 'help' for available commands.`;
+        result.appendChild(err);
+        append(result);
       }
 
       input.value = '';
-      const terminalBody = document.querySelector('.terminal-body');
-      if (terminalBody) {
-        terminalBody.scrollTop = terminalBody.scrollHeight;
-      }
     } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
       if (history.length > 0 && historyIndex > 0) {
         historyIndex--;
         input.value = history[historyIndex];
       }
     } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
       if (historyIndex < history.length - 1) {
         historyIndex++;
         input.value = history[historyIndex];
@@ -187,41 +231,35 @@ function initTerminal() {
       }
     }
   });
-
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
 }
 
 /* -------------------------------------------------------------
- * 4. Project Filter Tabs
+ * 4. Project filter tabs
  * ------------------------------------------------------------- */
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const cards = document.querySelectorAll('.project-card');
 
   filterBtns.forEach((btn) => {
+    btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
     btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.classList.remove('active'));
+      filterBtns.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
 
-      const filter = btn.getAttribute('data-filter');
+      const filter = btn.dataset.filter;
 
-      projectCards.forEach((card) => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'flex';
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(15px)';
-          setTimeout(() => {
-            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          card.style.display = 'none';
+      cards.forEach((card) => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.hidden = !show;
+        if (show && !prefersReducedMotion()) {
+          card.animate(
+            [{ opacity: 0, transform: 'translateY(15px)' }, { opacity: 1, transform: 'translateY(0)' }],
+            { duration: 300, easing: 'ease-out' }
+          );
         }
       });
     });
@@ -229,97 +267,105 @@ function initProjectFilters() {
 }
 
 /* -------------------------------------------------------------
- * 5. One-Click Copy Email & Toast Feedback
+ * 5. Copy email + toast
  * ------------------------------------------------------------- */
 function initCopyEmail() {
-  const copyBtns = document.querySelectorAll('.copy-email-btn');
   const toast = document.getElementById('toast');
-  const email = 'truong311203@gmail.com';
+  let toastTimer;
 
-  copyBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigator.clipboard.writeText(email).then(() => {
-        showToast(`Copied ${email} to clipboard!`);
-      }).catch(() => {
-        showToast(`Email: ${email}`);
-      });
-    });
-  });
-
-  function showToast(message) {
+  const showToast = (message) => {
     if (!toast) return;
     toast.textContent = `✓ ${message}`;
     toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3200);
-  }
-}
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+  };
 
-/* -------------------------------------------------------------
- * 6. Contact Form Simulation
- * ------------------------------------------------------------- */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-
-    btn.innerHTML = 'Sending transmission...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      btn.innerHTML = '✓ Message Sent!';
-      btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-      form.reset();
-
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 3500);
-    }, 900);
+  document.querySelectorAll('.copy-email-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const copy = navigator.clipboard
+        ? navigator.clipboard.writeText(CONTACT_EMAIL)
+        : Promise.reject(new Error('Clipboard API unavailable'));
+      copy
+        .then(() => showToast(`Copied ${CONTACT_EMAIL}`))
+        .catch(() => showToast(`Email: ${CONTACT_EMAIL}`));
+    });
   });
 }
 
 /* -------------------------------------------------------------
- * 7. Animated Metrics Counter
+ * 6. Contact form → pre-filled mailto: draft
+ *    There is no backend, so the form never claims to "send".
+ * ------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const note = document.getElementById('form-note');
+  if (!form) return;
+
+  const defaultNote = note ? note.textContent : '';
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      if (note) {
+        note.textContent = 'Please fill in every field with a valid email address.';
+        note.classList.add('error');
+      }
+      return;
+    }
+
+    const data = new FormData(form);
+    const subject = String(data.get('subject')).trim();
+    const body = [
+      String(data.get('message')).trim(),
+      '',
+      `— ${String(data.get('name')).trim()} <${String(data.get('email')).trim()}>`,
+    ].join('\n');
+
+    window.location.href =
+      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    if (note) {
+      note.classList.remove('error');
+      note.textContent = `If nothing opened, email me directly at ${CONTACT_EMAIL}.`;
+      setTimeout(() => { note.textContent = defaultNote; }, 8000);
+    }
+  });
+}
+
+/* -------------------------------------------------------------
+ * 7. Metric counters
  * ------------------------------------------------------------- */
 function initCounterAnimation() {
   const counters = document.querySelectorAll('.metric-value');
-  let activated = false;
+  const section = document.querySelector('.metrics-section');
+  if (!counters.length || !section) return;
+
+  // The HTML already holds the real numbers (no-JS / reduced-motion fallback);
+  // only reset to 0 when we are actually going to animate.
+  if (prefersReducedMotion() || !('IntersectionObserver' in window)) return;
+  counters.forEach((c) => { c.textContent = '0'; });
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !activated) {
-        activated = true;
-        counters.forEach((counter) => {
-          const target = +counter.getAttribute('data-target');
-          const suffix = counter.getAttribute('data-suffix') || '';
-          const duration = 1600;
-          const step = Math.max(1, Math.floor(target / (duration / 25)));
-          let current = 0;
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    observer.disconnect();
 
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              counter.textContent = target + suffix;
-              clearInterval(timer);
-            } else {
-              counter.textContent = current + suffix;
-            }
-          }, 25);
-        });
-      }
-    });
+    const duration = 1400;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      counters.forEach((c) => {
+        c.textContent = Math.round(Number(c.dataset.target) * eased) + (c.dataset.suffix || '');
+      });
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
   }, { threshold: 0.3 });
 
-  const metricsSection = document.querySelector('.metrics-section');
-  if (metricsSection) {
-    observer.observe(metricsSection);
-  }
+  observer.observe(section);
 }

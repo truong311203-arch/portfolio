@@ -1,61 +1,54 @@
-# 🌐 Trần Duy Trường — AI & Software Engineer Portfolio
+# Trần Duy Trường — Portfolio
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftruong311203-arch%2Fportfolio)
-[![Status: Online](https://img.shields.io/badge/Status-Online-10b981?style=flat-square)](#)
-[![Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20ES6%2B%20%7C%20Vercel-3b82f6?style=flat-square)](#)
+Personal portfolio of **Trần Duy Trường**, an AI/ML engineer in Hanoi: HCMUT Computer Science graduate, AI Engineer Intern at VinSmart Future, focused on grounded RAG systems, LLM evaluation and applied ML research.
 
-A high-performance, minimalist modern tech developer portfolio crafted for **Trần Duy Trường** (`truong311203-arch`). Engineered with Silicon Valley dark-mode aesthetics, rich micro-interactions, an interactive CLI terminal, and zero external runtime dependencies.
+**Live site:** https://portfolio-itme6.vercel.app
 
----
+## What's on the site
 
-## ⚡ Highlights & Features
+- **Projects** — four pieces of work:
+  - **GPTResident**, a grounded multi-tenant RAG assistant evaluated on a 201-case golden benchmark.
+  - **FA-GPNet**, a co-authored MIWAI 2025 paper on motor-imagery EEG classification.
+  - A LangGraph **multi-agent RAG** customer-support system.
+  - A **Qwen3.5-4B** QLoRA fine-tuning notebook.
+- **Architecture diagrams** — inline SVG drawn from each project's actual pipeline (no screenshots or mock dashboards).
+- **Skills** — grouped by area; solid tags are used in projects/internships, dashed tags are practised in labs and coursework.
+- **Experience & education** — VinSmart Future, the Vingroup AI Talent Program, HCMUT, Xuan Cuong Technology.
+- **Terminal** — a small toy shell (`help`, `about`, `projects`, `skills`, `education`, `experience`, `github`, `contact`, `neofetch`, `arise`, `clear`).
+- **Contact** — email, both GitHub accounts, and a form that opens a pre-filled `mailto:` draft (the site has no backend and stores nothing).
 
-- **Minimalist Modern Tech Aesthetic**: Deep slate dark mode, glowing cyan/indigo border accents, subtle glassmorphism, and responsive layouts.
-- **Interactive Developer CLI Terminal**: Visitors can execute real commands (`help`, `skills`, `projects`, `contact`, `neofetch`, `arise`, `clear`).
-- **Real-Time Telemetry Counters**: Dynamic animated counters for contributions, projects, and production pipelines.
-- **Interactive Project Showcase**: Filterable categories (*AI & Autonomous Agents*, *Systems & C++*, *Automation & Tools*) with high-res telemetry previews.
-- **Skills & Arsenal Matrix**: Detailed breakdown of Core Languages, LLM Swarms, RAG, Backend, and DevOps capabilities.
-- **1-Click Email Clipboard Copy**: Seamless copy interaction with toast feedback.
-- **Vercel Optimized (`vercel.json`)**: Configured with clean URLs, immutable asset caching, and security headers for 100/100 Lighthouse performance.
+## Where the code lives
 
----
+| Account | Contents |
+|---|---|
+| [`tranduytruong12`](https://github.com/tranduytruong12) | Personal projects and coursework |
+| [`truong311203-arch`](https://github.com/truong311203-arch) | VinUniversity AI20K lab repos (forks of the program's starter kits), this site, profile README |
 
-## 🛠️ Tech Stack
+## Tech
 
-- **Core**: Semantic HTML5, Modern ES6+ JavaScript
-- **Styling**: Vanilla CSS3 (Custom Design System, CSS Variables, Glassmorphism)
-- **Deployment**: [Vercel](https://vercel.com) (Continuous Deployment via GitHub)
-- **Assets**: Bespoke 3D Avatar & Project Visualizations, Inline SVGs
+Plain HTML, CSS and JavaScript — no build step, no framework, no runtime dependencies besides Google Fonts. Deployed on [Vercel](https://vercel.com) (`vercel.json` sets clean URLs, revalidated asset caching and basic security headers).
 
----
-
-## 🚀 Local Development
-
-To run locally without installing any dependencies:
-
-### Using Python:
-```bash
-python -m http.server 3000
 ```
-Then visit `http://localhost:3000` in your browser.
-
-### Using Node.js (npx serve):
-```bash
-npx -y serve .
+index.html
+assets/
+  css/style.css     design system + components
+  js/main.js        nav, terminal, project filters, copy-email, mailto form, counters
+  images/           portrait + favicon
 ```
 
----
+## Run locally
 
-## ☁️ Auto-Deployment on Vercel
+```bash
+python -m http.server 3000   # then open http://localhost:3000
+# or
+npx serve .
+```
 
-1. Push this repository to GitHub: `https://github.com/truong311203-arch/portfolio`
-2. Go to [vercel.com](https://vercel.com) and log in with your GitHub account.
-3. Click **"Add New Project"** -> Select **`portfolio`** -> Click **"Deploy"**.
-4. **Done!** Every future `git push` to `main` will automatically trigger an instant production build and deployment.
+## Keeping it accurate
 
----
+Every number on the site comes from the CV or from a project's own README/evaluation report. When the CV changes, update `index.html` (stats bar, GPTResident card, experience timeline) at the same time.
 
-## 📬 Contact & Guild Channels
+## Contact
 
-- **Email**: [truong311203@gmail.com](mailto:truong311203@gmail.com)
-- **GitHub**: [@truong311203-arch](https://github.com/truong311203-arch)
+- Email: [truong311203@gmail.com](mailto:truong311203@gmail.com)
+- GitHub: [@tranduytruong12](https://github.com/tranduytruong12) · [@truong311203-arch](https://github.com/truong311203-arch)

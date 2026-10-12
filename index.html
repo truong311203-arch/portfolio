@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trần Duy Trường | AI & Software Engineer Portfolio</title>
-  <meta name="description" content="Portfolio of Trần Duy Trường (truong311203-arch) - AI & Software Engineer specializing in Autonomous Agents, RAG Pipelines, and High-Performance Systems.">
-  <meta name="keywords" content="Trần Duy Trường, truong311203-arch, AI Engineer, Software Engineer, Autonomous Agents, LangChain, PyTorch, C++, Distributed Systems">
+  <title>Trần Duy Trường | AI/ML Engineer — RAG & LLM Systems</title>
+  <meta name="description" content="Portfolio of Trần Duy Trường — HCMUT Computer Science graduate and AI Engineer Intern at VinSmart Future. Grounded multi-tenant RAG, rigorous LLM evaluation, and a published EEG classification paper (MIWAI 2025).">
+  <meta name="keywords" content="Trần Duy Trường, AI Engineer, ML Engineer, RAG, LLM evaluation, LangGraph, LlamaIndex, pgvector, FastAPI, EEG, Gaussian Process, VinSmart Future, VinUniversity">
   <meta name="author" content="Trần Duy Trường">
-  
-  <!-- Open Graph / Meta -->
+  <link rel="canonical" href="https://portfolio-itme6.vercel.app/">
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Trần Duy Trường | AI & Software Engineer">
-  <meta property="og:description" content="Building Autonomous Agents, Distributed Systems, and High-Throughput AI Pipelines.">
-  <meta property="og:image" content="assets/images/portrait.jpg">
+  <meta property="og:url" content="https://portfolio-itme6.vercel.app/">
+  <meta property="og:title" content="Trần Duy Trường | AI/ML Engineer — RAG & LLM Systems">
+  <meta property="og:description" content="Grounded multi-tenant RAG with a 201-case golden benchmark, plus a published EEG classification paper.">
+  <meta property="og:image" content="https://portfolio-itme6.vercel.app/assets/images/portrait.jpg">
+  <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#080b11">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
@@ -25,6 +28,16 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></g></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  </svg>
 
   <!-- Ambient Glow Effects -->
   <div class="ambient-glow-top"></div>
@@ -40,69 +53,74 @@
 
       <ul class="nav-links" id="nav-menu">
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#terminal" class="nav-link">CLI</a></li>
-        <li><a href="#skills" class="nav-link">Arsenal</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experience" class="nav-link">Milestones</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#journey" class="nav-link">Experience</a></li>
+        <li><a href="#terminal" class="nav-link">Terminal</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
       <div class="nav-cta">
-        <button class="btn btn-secondary btn-sm copy-email-btn" id="btn-nav-copy-email">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+        <button class="btn btn-secondary btn-sm copy-email-btn" id="btn-nav-copy-email" type="button">
+          <svg width="14" height="14" aria-hidden="true"><use href="#i-copy"/></svg>
           <span>Copy Email</span>
         </button>
-        <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-nav-github">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a href="https://github.com/tranduytruong12" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="btn-nav-github">
+          <svg width="14" height="14" aria-hidden="true"><use href="#i-github"/></svg>
           <span>GitHub</span>
         </a>
-        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
+  <main>
   <!-- Hero Section -->
   <section class="hero-section" id="home">
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="status-pill">
           <span class="status-dot"></span>
-          <span>Available for AI Systems & Autonomous Workflows</span>
+          <span>Open to AI/ML Engineer roles · Intern at VinSmart Future</span>
         </div>
 
         <h1 class="hero-title">
-          Engineering <span class="gradient-text">Autonomous AI</span> & Scalable Systems.
+          Building <span class="gradient-text">LLM agents</span> & retrieval systems that hold up.
         </h1>
 
         <p class="hero-subtitle">
-          Trần Duy Trường <span class="accent-text">/ truong311203-arch</span>
+          Trần Duy Trường <span class="accent-text">/ AI/ML engineer, Hanoi</span>
         </p>
 
         <p class="hero-bio">
-          Software & AI Engineer specializing in <strong>Autonomous Agent Workflows</strong>, <strong>Real-time RAG Architectures</strong>, and high-performance backend pipelines in Python & C++. Continually researching, optimizing, and deploying production-grade systems.
+          Computer Science graduate from <strong>HCMUT</strong>. I build grounded <strong>RAG systems</strong> and measure them properly — GPTResident is checked against a 201-case golden benchmark — and I co-authored a peer-reviewed <strong>EEG classification</strong> paper at MIWAI 2025.
         </p>
 
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary" id="btn-hero-explore">
-            <span>Explore Systems</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <span>See the projects</span>
+            <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
           <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
-            <span>Get in Touch</span>
+            <span>Get in touch</span>
           </a>
         </div>
 
         <div class="hero-socials">
-          <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile" id="link-hero-github">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/tranduytruong12" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub — projects (@tranduytruong12)" aria-label="GitHub — projects (@tranduytruong12)" id="link-hero-github">
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-github"/></svg>
           </a>
-          <a href="mailto:truong311203@gmail.com" class="social-link" title="Direct Email" id="link-hero-email">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub — AI20K labs (@truong311203-arch)" aria-label="GitHub — AI20K labs (@truong311203-arch)" id="link-hero-github-labs">
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-github"/></svg>
+            <span class="social-sub">labs</span>
           </a>
-          <button class="social-link copy-email-btn" title="Copy Email to Clipboard" id="btn-hero-copy-email">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          <a href="mailto:truong311203@gmail.com" class="social-link" title="Email" aria-label="Email" id="link-hero-email">
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg>
+          </a>
+          <button class="social-link copy-email-btn" title="Copy email to clipboard" aria-label="Copy email to clipboard" id="btn-hero-copy-email" type="button">
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-copy"/></svg>
           </button>
         </div>
       </div>
@@ -110,24 +128,23 @@
       <!-- Hero Visual Frame -->
       <div class="hero-visual">
         <div class="avatar-wrapper">
-          <!-- Floating Badges -->
           <div class="floating-badge badge-top-left">
             <div class="badge-icon blue">⚡</div>
             <div>
-              <div style="font-size:0.7rem; color:var(--text-dim)">SYSTEM ARCH</div>
-              <div>AI-First Engineer</div>
+              <div class="badge-kicker">FOCUS</div>
+              <div>Grounded RAG</div>
             </div>
           </div>
 
           <div class="avatar-frame">
-            <img src="assets/images/portrait.jpg" alt="Trần Duy Trường Portrait" class="avatar-img" width="380" height="380">
+            <img src="assets/images/portrait.jpg" alt="Portrait of Trần Duy Trường" class="avatar-img" width="380" height="380">
           </div>
 
           <div class="floating-badge badge-bottom-right">
             <div class="badge-icon emerald">✓</div>
             <div>
-              <div style="font-size:0.7rem; color:var(--text-dim)">EXECUTION</div>
-              <div>Continuous Growth</div>
+              <div class="badge-kicker">NOW</div>
+              <div>AI Intern · VSF</div>
             </div>
           </div>
         </div>
@@ -135,84 +152,409 @@
     </div>
   </section>
 
-  <!-- Telemetry / Live Metrics Section -->
-  <section class="metrics-section">
+  <!-- Numbers (all taken from my CV / GPTResident evaluation report) -->
+  <section class="metrics-section" aria-label="Key numbers">
     <div class="container metrics-grid">
       <div class="metric-card">
-        <div class="metric-value" data-target="1500" data-suffix="+">0</div>
-        <div class="metric-label">Git Contributions</div>
+        <div class="metric-value" data-target="201">201</div>
+        <div class="metric-label">Golden benchmark cases · GPTResident</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value" data-target="16" data-suffix="+">0</div>
-        <div class="metric-label">Agent Pipelines & Projects</div>
+        <div class="metric-value" data-target="100" data-suffix="%">100%</div>
+        <div class="metric-label">Citation integrity · GPTResident</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value" data-target="12" data-suffix="+">0</div>
-        <div class="metric-label">Production Technologies</div>
+        <div class="metric-value" data-target="1">1</div>
+        <div class="metric-label">Paper · MIWAI 2025 (Springer LNAI)</div>
       </div>
       <div class="metric-card">
-        <div class="metric-value" data-target="100" data-suffix="%">0</div>
-        <div class="metric-label">Passion & Commitment</div>
+        <div class="metric-value" data-target="2">2</div>
+        <div class="metric-label">Internships · AI &amp; software</div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive CLI Terminal Section -->
-  <section class="terminal-section" id="terminal">
+  <!-- About -->
+  <section class="about-section" id="about">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">&lt; INTERACTIVE ENVIRONMENT &gt;</div>
-        <h2 class="section-title">Developer Terminal</h2>
-        <p class="section-desc">Type commands below to inspect runtime capabilities, skills, and background information in real-time.</p>
+        <div class="section-badge">// ABOUT</div>
+        <h2 class="section-title">From EEG research to production RAG</h2>
       </div>
 
-      <div class="terminal-window">
-        <div class="terminal-header">
-          <div class="terminal-controls">
-            <span class="control-dot red"></span>
-            <span class="control-dot yellow"></span>
-            <span class="control-dot green"></span>
-          </div>
-          <div class="terminal-title">bash — truong311203@workstation — 80x24</div>
-          <div style="width: 40px"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I graduated in Computer Science from <strong>HCMUT</strong> in November 2025. My thesis and a co-authored <strong>MIWAI 2025</strong> paper were on motor-imagery EEG classification; since then my focus has been <strong>LLM applications</strong> — retrieval, agent workflows, and above all, evaluating them.
+          </p>
+          <p>
+            I'm finishing the <strong>Vingroup AI Talent Training Program</strong> (VinUniversity, Cohort 3, Track 2: AI &amp; Data Infrastructure) and work as an <strong>AI Engineer Intern at VinSmart Future</strong> in the Green &amp; Smart Mobility division. I'm looking for an AI/ML Engineer role with a path toward production-grade AI systems.
+          </p>
+
+          <ul class="principles">
+            <li>
+              <span class="principle-title">Measure instead of guessing</span>
+              <span class="principle-desc">An auditable evaluation harness — five deterministic hard gates plus isolated LLM judges — over a golden benchmark split into dev, validation and held-out test.</span>
+            </li>
+            <li>
+              <span class="principle-title">Fail closed</span>
+              <span class="principle-desc">Answers come only from approved sources with traceable citations; role and zone scoping is enforced in retrieval, and out-of-scope questions are refused.</span>
+            </li>
+            <li>
+              <span class="principle-title">Keep a human in the loop</span>
+              <span class="principle-desc">When a QA agent isn't confident, the graph pauses with a checkpoint and resumes with reviewer feedback.</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="terminal-body">
-          <div class="terminal-output" id="terminal-output">
-            <p style="color:#64748b">/* Type 'help' to view available system commands */</p>
-            <div>
-              <span class="terminal-prompt">guest@truong311203:~$</span> 
-              <span>neofetch</span>
-            </div>
-            <pre style="color:#a5b4fc; font-family:var(--font-mono); font-size:0.82rem; margin-top:0.4rem;">
-   .---.       ENGINEER: Trần Duy Trường (truong311203-arch)
-  /     \      ROLE: AI & Software Engineer
- | () () |     STACK: Python | C++ | PyTorch | LangChain | Distributed Systems
-  \  _  /      STATUS: Online & Ready for Collaboration
-   `---`       LOCATION: Vietnam (UTC+7)
-            </pre>
-          </div>
-
-          <div class="terminal-input-row">
-            <span class="terminal-prompt">guest@truong311203:~$</span>
-            <input type="text" id="terminal-input" class="terminal-input" placeholder="type 'help', 'skills', 'projects', 'arise'..." autocomplete="off" spellcheck="false">
-          </div>
-
-          <div class="terminal-hint">
-            Tip: Press [Enter] to execute. Try commands: <code style="color:#38bdf8">skills</code>, <code style="color:#38bdf8">projects</code>, <code style="color:#38bdf8">about</code>, <code style="color:#38bdf8">contact</code>, <code style="color:#38bdf8">clear</code>
-          </div>
-        </div>
+        <aside class="about-card" aria-label="Snapshot">
+          <h3 class="about-card-title">Snapshot</h3>
+          <dl class="now-list">
+            <div><dt>Now</dt><dd>AI Engineer Intern, VinSmart Future (Vingroup)</dd></div>
+            <div><dt>Program</dt><dd>Vingroup AI Talent Program · Cohort 3 · AI &amp; Data Infrastructure</dd></div>
+            <div><dt>Degree</dt><dd>BSc Computer Science, HCMUT · GPA 3.3/4.0 · 11/2025</dd></div>
+            <div><dt>Thesis</dt><dd>Motor Imagery Classification from EEG Signals (97.5/100)</dd></div>
+            <div><dt>English</dt><dd>TOEIC 840/990</dd></div>
+            <div><dt>Looking for</dt><dd>AI/ML Engineer role</dd></div>
+            <div><dt>Based in</dt><dd>Hanoi, Vietnam</dd></div>
+          </dl>
+        </aside>
       </div>
     </div>
   </section>
 
-  <!-- Skills & Arsenal Section -->
+  <!-- Featured Projects Showcase -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">// SELECTED WORK</div>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Four pieces of work I'm happiest to be judged on. Diagrams are drawn from the actual pipeline of each project.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="rag" type="button">RAG &amp; Agents</button>
+        <button class="filter-btn" data-filter="research" type="button">Research</button>
+        <button class="filter-btn" data-filter="finetune" type="button">LLM Fine-tuning</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: GPTResident -->
+        <article class="project-card" data-category="rag">
+          <div class="project-image-box diagram-box">
+            <span class="project-tag-overlay">RAG · flagship</span>
+            <svg class="diagram" viewBox="0 0 560 250" role="img" aria-label="Indexing: approved policy PDFs, MinerU OCR parsing, structure-aware chunking, pgvector plus PostgreSQL full-text index. Querying: role and zone scope, LangGraph fail-closed router, scoped hybrid retrieval, cited answer or refusal. Evaluated by a harness of five hard gates and isolated LLM judges over 201 golden cases.">
+              <defs>
+                <marker id="a4" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#64748b"/></marker>
+              </defs>
+              <text class="dg-label" x="10" y="14">INDEXING</text>
+              <text class="dg-label" x="10" y="108">QUERYING</text>
+              <!-- edges -->
+              <path class="dg-line" d="M121,46 H151" marker-end="url(#a4)"/>
+              <path class="dg-line" d="M264,46 H294" marker-end="url(#a4)"/>
+              <path class="dg-line" d="M407,46 H437" marker-end="url(#a4)"/>
+              <path class="dg-line" d="M494,68 V93 H351 V116" marker-end="url(#a4)"/>
+              <text class="dg-label" x="430" y="88" text-anchor="middle">search</text>
+              <path class="dg-line" d="M121,140 H151" marker-end="url(#a4)"/>
+              <path class="dg-line" d="M264,140 H294" marker-end="url(#a4)"/>
+              <path class="dg-line" d="M407,140 H437" marker-end="url(#a4)"/>
+              <!-- row 1 -->
+              <rect class="dg-node" x="10" y="24" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="65.5" y="43">Policy PDFs</text>
+              <text class="dg-sub c" x="65.5" y="58">approved docs</text>
+              <rect class="dg-node" x="153" y="24" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="208.5" y="43">Parse</text>
+              <text class="dg-sub c" x="208.5" y="58">MinerU OCR</text>
+              <rect class="dg-node" x="296" y="24" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="351.5" y="43">Chunk</text>
+              <text class="dg-sub c" x="351.5" y="58">structure-aware</text>
+              <rect class="dg-node accent" x="439" y="24" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="494.5" y="43">Index</text>
+              <text class="dg-sub c" x="494.5" y="58">pgvector + FTS</text>
+              <!-- row 2 -->
+              <rect class="dg-node" x="10" y="118" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="65.5" y="137">Query</text>
+              <text class="dg-sub c" x="65.5" y="152">role + zone</text>
+              <rect class="dg-node" x="153" y="118" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="208.5" y="137">Router</text>
+              <text class="dg-sub c" x="208.5" y="152">fail-closed</text>
+              <rect class="dg-node accent" x="296" y="118" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="351.5" y="137">Retrieval</text>
+              <text class="dg-sub c" x="351.5" y="152">hybrid · wRRF</text>
+              <rect class="dg-node" x="439" y="118" width="111" height="44" rx="8"/>
+              <text class="dg-title c" x="494.5" y="137">Answer</text>
+              <text class="dg-sub c" x="494.5" y="152">cited / refusal</text>
+              <!-- evaluation band -->
+              <rect class="dg-node hitl" x="10" y="190" width="540" height="46" rx="8"/>
+              <text class="dg-title c" x="280" y="209">Evaluation harness</text>
+              <text class="dg-sub c" x="280" y="225">5 hard gates + isolated LLM judges · 201 golden cases</text>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">GPTResident — Grounded Multi-Tenant RAG</h3>
+            <p class="project-desc">
+              An end-to-end Vietnamese RAG assistant for residential management. Answers come only from approved policies, with traceable citations, role/zone isolation and fail-closed LangGraph routing.
+            </p>
+            <ul class="project-points">
+              <li><strong>My part:</strong> evaluation, retrieval and indexing stack, agent-flow tuning; I also supported agent and frontend/backend refactoring.</li>
+              <li>Structure-aware PDF parsing and chunking; scoped hybrid pgvector + PostgreSQL FTS retrieval with weighted RRF and HyDE retries.</li>
+              <li>Auditable harness: 5 deterministic hard gates + isolated LLM judges over a 201-case approved benchmark (dev / validation / held-out test).</li>
+              <li><strong>Results:</strong> 94.4% / 92.6% / 82.7% end-to-end pass on dev / validation / test (test includes 19 adversarial cases). On test: 100% groundedness, 89.1% answer correctness, 92.9% retrieval correctness (Recall@9 0.955), 7/7 correct refusals. 100% citation integrity and zero cross-scope leakage.</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">LangGraph</span>
+              <span class="tech-pill">LlamaIndex</span>
+              <span class="tech-pill">pgvector</span>
+              <span class="tech-pill">MinerU OCR</span>
+              <span class="tech-pill">Next.js</span>
+              <span class="tech-pill">Docker</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://cudan.me/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Live deployment</span>
+                <svg width="14" height="14" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+              <span class="project-meta">Python · Next.js · OpenAI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: FA-GPNet -->
+        <article class="project-card" data-category="research">
+          <div class="project-image-box diagram-box">
+            <span class="project-tag-overlay">Research · MIWAI 2025</span>
+            <svg class="diagram" viewBox="0 0 560 250" role="img" aria-label="FA-GPNet pipeline: EEG signal, FBCSP features, compact autoencoder, Gaussian Process Classifier. Results on BCI Competition IV-2b: 78.19 percent accuracy, 85.32 percent AUC, about 4 points above a traditional ML pipeline.">
+              <defs>
+                <marker id="a5" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#64748b"/></marker>
+              </defs>
+              <text class="dg-label" x="10" y="14">FA-GPNET PIPELINE</text>
+              <path class="dg-line" d="M121,50 H151" marker-end="url(#a5)"/>
+              <path class="dg-line" d="M264,50 H294" marker-end="url(#a5)"/>
+              <path class="dg-line" d="M407,50 H437" marker-end="url(#a5)"/>
+              <rect class="dg-node" x="10" y="26" width="111" height="48" rx="8"/>
+              <text class="dg-title c" x="65.5" y="48">EEG signal</text>
+              <text class="dg-sub c" x="65.5" y="63">motor imagery</text>
+              <rect class="dg-node" x="153" y="26" width="111" height="48" rx="8"/>
+              <text class="dg-title c" x="208.5" y="48">FBCSP</text>
+              <text class="dg-sub c" x="208.5" y="63">spatial features</text>
+              <rect class="dg-node" x="296" y="26" width="111" height="48" rx="8"/>
+              <text class="dg-title c" x="351.5" y="48">Autoencoder</text>
+              <text class="dg-sub c" x="351.5" y="63">compact encoding</text>
+              <rect class="dg-node accent" x="439" y="26" width="111" height="48" rx="8"/>
+              <text class="dg-title c" x="494.5" y="48">GP Classifier</text>
+              <text class="dg-sub c" x="494.5" y="63">probabilistic out</text>
+
+              <text class="dg-label" x="10" y="112">RESULTS · BCI COMPETITION IV-2B</text>
+              <rect class="dg-node" x="10" y="124" width="170" height="76" rx="8"/>
+              <text class="dg-num" x="25" y="160">78.19%</text>
+              <text class="dg-sub" x="25" y="182">accuracy</text>
+              <rect class="dg-node" x="195" y="124" width="170" height="76" rx="8"/>
+              <text class="dg-num" x="210" y="160">85.32%</text>
+              <text class="dg-sub" x="210" y="182">AUC</text>
+              <rect class="dg-node accent" x="380" y="124" width="170" height="76" rx="8"/>
+              <text class="dg-num" x="395" y="160">≈ +4%</text>
+              <text class="dg-sub" x="395" y="182">accuracy vs. classical ML</text>
+              <text class="dg-label" x="10" y="226">Competitive with a frontier lightweight deep-learning model</text>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">FA-GPNet — Motor-Imagery EEG Classification</h3>
+            <p class="project-desc">
+              Co-authored paper in the MIWAI 2025 proceedings (Springer LNAI): a hybrid brain–computer-interface pipeline that gives probabilistic predictions rather than hard labels.
+            </p>
+            <ul class="project-points">
+              <li>Combines FBCSP feature extraction, a compact autoencoder and a Gaussian Process Classifier for probabilistic inference of the final output.</li>
+              <li><strong>My part:</strong> the literature review of motor-imagery classification, a baseline FBCSP + Gaussian-process pipeline, and reviewing the paper.</li>
+              <li>My bachelor's thesis (97.5/100) was also on motor-imagery classification from EEG signals.</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-pill">EEG</span>
+              <span class="tech-pill">Brain–Computer Interface</span>
+              <span class="tech-pill">FBCSP</span>
+              <span class="tech-pill">Gaussian Process</span>
+              <span class="tech-pill">Autoencoder</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link-btn static">Peer-reviewed publication</span>
+              <span class="project-meta">MIWAI 2025 · Springer LNAI</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="rag">
+          <div class="project-image-box diagram-box">
+            <span class="project-tag-overlay">Agents & RAG</span>
+            <svg class="diagram" viewBox="0 0 560 250" role="img" aria-label="Pipeline: intent classifier, query rewriter, hybrid retriever, draft writer, QA agent, finalize; QA can pause for human review and feed back into the draft writer.">
+              <defs>
+                <marker id="a1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#64748b"/></marker>
+                <marker id="a1v" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8b5cf6"/></marker>
+              </defs>
+              <!-- edges -->
+              <path class="dg-line" d="M165,36 H203" marker-end="url(#a1)"/>
+              <path class="dg-line" d="M355,36 H393" marker-end="url(#a1)"/>
+              <path class="dg-line" d="M470,58 V100" marker-end="url(#a1)"/>
+              <path class="dg-line" d="M395,124 H357" marker-end="url(#a1)"/>
+              <path class="dg-line" d="M205,124 H167" marker-end="url(#a1)"/>
+              <path class="dg-line violet dashed" d="M280,146 V188" marker-end="url(#a1v)"/>
+              <path class="dg-line violet dashed" d="M355,212 H470 V148" marker-end="url(#a1v)"/>
+              <text class="dg-label" x="185" y="117" text-anchor="middle">pass</text>
+              <text class="dg-label" x="288" y="172">needs review</text>
+              <text class="dg-label violet" x="412" y="206" text-anchor="middle">feedback</text>
+              <text class="dg-label" x="15" y="78">escalate · general</text>
+              <text class="dg-label" x="15" y="90">→ early exit</text>
+              <!-- nodes -->
+              <rect class="dg-node" x="15" y="14" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="27" y="33">Intent Classifier</text>
+              <text class="dg-sub" x="27" y="48">few-shot · 6 intents</text>
+              <rect class="dg-node" x="205" y="14" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="217" y="33">Query Rewriter</text>
+              <text class="dg-sub" x="217" y="48">multi-turn context</text>
+              <rect class="dg-node accent" x="395" y="14" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="407" y="33">Hybrid Retriever</text>
+              <text class="dg-sub" x="407" y="48">BM25+dense · RRF · rerank</text>
+              <rect class="dg-node" x="395" y="102" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="407" y="121">Draft Writer</text>
+              <text class="dg-sub" x="407" y="136">grounded in context</text>
+              <rect class="dg-node" x="205" y="102" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="217" y="121">QA Agent</text>
+              <text class="dg-sub" x="217" y="136">structured verdict</text>
+              <rect class="dg-node" x="15" y="102" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="27" y="121">Finalize</text>
+              <text class="dg-sub" x="27" y="136">JSON reply</text>
+              <rect class="dg-node hitl" x="205" y="190" width="150" height="44" rx="8"/>
+              <text class="dg-title" x="217" y="209">Human Review</text>
+              <text class="dg-sub" x="217" y="224">interrupt() · resume</text>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Multi-Agent RAG Customer Support</h3>
+            <p class="project-desc">
+              A LangGraph state machine that routes support queries, retrieves grounded context, drafts a reply, and has a QA agent verify it before anything is sent.
+            </p>
+            <ul class="project-points">
+              <li>Intent routing, multi-turn query rewriting, QA retry loop, and <code>interrupt()</code>-based human review with checkpointed resume.</li>
+              <li>Dense + BM25 retrieval fused with RRF, then Cohere Rerank v3; hierarchical auto-merging chunks over ChromaDB.</li>
+              <li>FastAPI service (<code>/chat</code>, <code>/chat/resume</code>, <code>/ingest</code>), Streamlit UI, Docker Compose, RAGAS + LangSmith evaluation, 9 pytest modules.</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">LangGraph</span>
+              <span class="tech-pill">LlamaIndex</span>
+              <span class="tech-pill">ChromaDB</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">Docker</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/tranduytruong12/RAG-multi-agents-system" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>View source</span>
+                <svg width="14" height="14" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+              <span class="project-meta">Apr — Jul 2026 · 16 commits</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="finetune">
+          <div class="project-image-box diagram-box">
+            <span class="project-tag-overlay">LLM fine-tuning</span>
+            <svg class="diagram" viewBox="0 0 560 250" role="img" aria-label="Three datasets are normalized and filtered, used for QLoRA supervised fine-tuning of Qwen3.5-4B, and exported as a LoRA adapter, merged 16-bit weights, or GGUF.">
+              <defs>
+                <marker id="a3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#64748b"/></marker>
+              </defs>
+              <!-- edges -->
+              <path class="dg-line" d="M185,32 C203,32 200,76 213,76" marker-end="url(#a3)"/>
+              <path class="dg-line" d="M185,76 H213" marker-end="url(#a3)"/>
+              <path class="dg-line" d="M185,120 C203,120 200,76 213,76" marker-end="url(#a3)"/>
+              <path class="dg-line" d="M350,76 H383" marker-end="url(#a3)"/>
+              <path class="dg-line" d="M465,112 V146 M95,146 H465"/>
+              <path class="dg-line" d="M95,146 V178" marker-end="url(#a3)"/>
+              <path class="dg-line" d="M280,146 V178" marker-end="url(#a3)"/>
+              <path class="dg-line" d="M465,146 V178" marker-end="url(#a3)"/>
+              <!-- datasets -->
+              <rect class="dg-node" x="15" y="14" width="170" height="36" rx="8"/>
+              <text class="dg-title sm" x="27" y="30">Step-3.5-Flash-SFT</text>
+              <text class="dg-sub" x="27" y="43">general chat · 16k</text>
+              <rect class="dg-node" x="15" y="58" width="170" height="36" rx="8"/>
+              <text class="dg-title sm" x="27" y="74">Competitive Programming</text>
+              <text class="dg-sub" x="27" y="87">Python reasoning · 9.5k</text>
+              <rect class="dg-node" x="15" y="102" width="170" height="36" rx="8"/>
+              <text class="dg-title sm" x="27" y="118">glaive-code-assistant-v3</text>
+              <text class="dg-sub" x="27" y="131">Python coding Q&amp;A · 6.5k</text>
+              <!-- normalize -->
+              <rect class="dg-node" x="215" y="40" width="135" height="72" rx="8"/>
+              <text class="dg-title" x="227" y="62">Normalize &amp; Filter</text>
+              <text class="dg-sub" x="227" y="80">&lt;think&gt; format</text>
+              <text class="dg-sub" x="227" y="94">≤8192 tok · ~20k kept</text>
+              <!-- train -->
+              <rect class="dg-node accent" x="385" y="40" width="160" height="72" rx="8"/>
+              <text class="dg-title" x="397" y="62">QLoRA SFT</text>
+              <text class="dg-sub" x="397" y="80">Qwen3.5-4B-Base · 4-bit</text>
+              <text class="dg-sub" x="397" y="94">Unsloth · TRL · r=32</text>
+              <!-- exports -->
+              <rect class="dg-node" x="15" y="180" width="160" height="44" rx="8"/>
+              <text class="dg-title" x="27" y="199">LoRA adapter</text>
+              <text class="dg-sub" x="27" y="214">PEFT checkpoint</text>
+              <rect class="dg-node" x="200" y="180" width="160" height="44" rx="8"/>
+              <text class="dg-title" x="212" y="199">Merged 16-bit</text>
+              <text class="dg-sub" x="212" y="214">Hugging Face weights</text>
+              <rect class="dg-node" x="385" y="180" width="160" height="44" rx="8"/>
+              <text class="dg-title" x="397" y="199">GGUF</text>
+              <text class="dg-sub" x="397" y="214">llama.cpp runtimes</text>
+              <text class="dg-label" x="15" y="243">Google Colab GPU · optional Weights &amp; Biases tracking</text>
+            </svg>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Qwen3.5-4B Coding &amp; Reasoning Fine-tune</h3>
+            <p class="project-desc">
+              A Colab notebook that adapts Qwen3.5-4B-Base into a coding/reasoning assistant with supervised fine-tuning in Qwen's <code>&lt;think&gt;…&lt;/think&gt;</code> format.
+            </p>
+            <ul class="project-points">
+              <li>Mixes three public datasets into one chat format with role/turn validation, length filtering, and overlap pruning between coding sets.</li>
+              <li>LoRA on attention + MLP projections, 8k context, response-only loss, 3% held-out split; exports adapter, merged 16-bit, and GGUF.</li>
+              <li><strong>Status:</strong> a learning-oriented experiment — no benchmark report yet (planned in the repo).</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-pill">Unsloth</span>
+              <span class="tech-pill">LoRA / QLoRA</span>
+              <span class="tech-pill">TRL</span>
+              <span class="tech-pill">Hugging Face</span>
+              <span class="tech-pill">Jupyter</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/tranduytruong12/Qwen3.5-4B-Coding" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>View notebook</span>
+                <svg width="14" height="14" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+              <span class="project-meta">May 2026 · 4 commits</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="more-line">
+        Smaller experiments, coursework and the 22 VinUniversity AI20K lab repos live on
+        <a href="https://github.com/tranduytruong12" target="_blank" rel="noopener noreferrer">@tranduytruong12</a> and
+        <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer">@truong311203-arch</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
   <section class="skills-section" id="skills">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">// TECHNICAL PROFICIENCIES</div>
-        <h2 class="section-title">Arsenal & Tech Stack</h2>
-        <p class="section-desc">A curated set of technologies and architectures honed through practical projects and continuous research.</p>
+        <div class="section-badge">// SKILLS</div>
+        <h2 class="section-title">Tools I actually use</h2>
+        <p class="section-desc">Grouped by what I've worked with in the projects and internships above.</p>
+        <p class="skill-legend">
+          <span class="legend-swatch solid"></span> used in projects / internships
+          <span class="legend-swatch dashed"></span> practised in labs &amp; coursework
+        </p>
       </div>
 
       <div class="skills-grid">
@@ -223,310 +565,205 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
             <div>
-              <h3 class="skill-card-title">Core Languages</h3>
-              <p class="skill-card-desc">High performance & versatility</p>
+              <h3 class="skill-card-title">Languages</h3>
+              <p class="skill-card-desc">Python first</p>
             </div>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Python 3.12+</span>
-            <span class="skill-tag">C++ (C++17/20)</span>
-            <span class="skill-tag">JavaScript / ES6</span>
-            <span class="skill-tag">SQL (PostgreSQL)</span>
-            <span class="skill-tag">Shell & Bash</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag lab">HCL (Terraform)</span>
           </div>
         </div>
 
-        <!-- 2. AI & LLMs -->
+        <!-- 2. LLMs & Agents -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-icon" style="color:var(--accent-cyan); background:rgba(6, 182, 212, 0.15)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
             </div>
             <div>
-              <h3 class="skill-card-title">AI & Agentic Systems</h3>
-              <p class="skill-card-desc">LLMs & Autonomous Swarms</p>
+              <h3 class="skill-card-title">LLMs &amp; Agents</h3>
+              <p class="skill-card-desc">Orchestration, control, evaluation</p>
             </div>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">LangChain & LangGraph</span>
-            <span class="skill-tag">PyTorch Deep Learning</span>
-            <span class="skill-tag">Autonomous Agents</span>
-            <span class="skill-tag">Human-in-the-Loop</span>
-            <span class="skill-tag">HuggingFace Models</span>
-            <span class="skill-tag">Function Calling</span>
+            <span class="skill-tag">LangGraph</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">LlamaIndex</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Harness engineering</span>
+            <span class="skill-tag">LLM-as-judge</span>
+            <span class="skill-tag">Human-in-the-loop</span>
+            <span class="skill-tag lab">ReAct &amp; tool calling</span>
+            <span class="skill-tag lab">Guardrails</span>
           </div>
         </div>
 
-        <!-- 3. RAG & Vector Search -->
+        <!-- 3. RAG & Retrieval -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-icon" style="color:var(--accent-violet); background:rgba(139, 92, 246, 0.15)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
             </div>
             <div>
-              <h3 class="skill-card-title">RAG & Vector Retrieval</h3>
-              <p class="skill-card-desc">Dense semantic indexing</p>
+              <h3 class="skill-card-title">RAG &amp; Retrieval</h3>
+              <p class="skill-card-desc">Index, retrieve, verify</p>
             </div>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Qdrant Vector DB</span>
-            <span class="skill-tag">Pinecone / Chroma</span>
-            <span class="skill-tag">Hybrid Search</span>
-            <span class="skill-tag">Cross-Encoder Reranking</span>
-            <span class="skill-tag">Document Ingestion</span>
+            <span class="skill-tag">pgvector</span>
+            <span class="skill-tag">PostgreSQL FTS</span>
+            <span class="skill-tag">ChromaDB</span>
+            <span class="skill-tag">Hybrid search</span>
+            <span class="skill-tag">Weighted RRF</span>
+            <span class="skill-tag">HyDE</span>
+            <span class="skill-tag">Structure-aware chunking</span>
+            <span class="skill-tag">MinerU OCR</span>
+            <span class="skill-tag">Cohere Rerank</span>
+            <span class="skill-tag">RAGAS</span>
           </div>
         </div>
 
-        <!-- 4. Backend Systems -->
-        <div class="skill-card">
-          <div class="skill-card-header">
-            <div class="skill-icon" style="color:var(--accent-blue); background:rgba(59, 130, 246, 0.15)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            </div>
-            <div>
-              <h3 class="skill-card-title">Backend Architecture</h3>
-              <p class="skill-card-desc">Robust asynchronous APIs</p>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">FastAPI (Async Python)</span>
-            <span class="skill-tag">Node.js Services</span>
-            <span class="skill-tag">RESTful Architecture</span>
-            <span class="skill-tag">Redis In-Memory Cache</span>
-            <span class="skill-tag">Distributed Tasks</span>
-          </div>
-        </div>
-
-        <!-- 5. Data & Processing -->
+        <!-- 4. Fine-tuning & ML -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-icon" style="color:var(--accent-emerald); background:rgba(16, 185, 129, 0.15)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
             </div>
             <div>
-              <h3 class="skill-card-title">Data & Pipelines</h3>
-              <p class="skill-card-desc">High-volume transformation</p>
+              <h3 class="skill-card-title">ML &amp; Fine-tuning</h3>
+              <p class="skill-card-desc">Classical ML to small LLMs</p>
             </div>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Pandas & NumPy</span>
-            <span class="skill-tag">ETL Workflows</span>
-            <span class="skill-tag">Data Cleaning & Prep</span>
-            <span class="skill-tag">Feature Engineering</span>
-            <span class="skill-tag">Data Serialization</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">SFT</span>
+            <span class="skill-tag">LoRA / QLoRA</span>
+            <span class="skill-tag">Quantization</span>
+            <span class="skill-tag">Unsloth · TRL</span>
+            <span class="skill-tag">EEG signal processing</span>
+            <span class="skill-tag">Gaussian processes</span>
           </div>
         </div>
 
-        <!-- 6. DevOps & Infrastructure -->
+        <!-- 5. Backend & Frontend -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="color:var(--accent-blue); background:rgba(59, 130, 246, 0.15)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div>
+              <h3 class="skill-card-title">Backend &amp; Web</h3>
+              <p class="skill-card-desc">Services you can test and run</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Node.js / Express</span>
+            <span class="skill-tag">REST · JWT · RBAC</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Ant Design · Tailwind</span>
+            <span class="skill-tag">Ruff · Mypy</span>
+          </div>
+        </div>
+
+        <!-- 6. Platform & DevOps -->
         <div class="skill-card">
           <div class="skill-card-header">
             <div class="skill-icon" style="color:#f59e0b; background:rgba(245, 158, 11, 0.15)">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
             </div>
             <div>
-              <h3 class="skill-card-title">DevOps & Cloud</h3>
-              <p class="skill-card-desc">CI/CD & Containerization</p>
+              <h3 class="skill-card-title">Platform &amp; DevOps</h3>
+              <p class="skill-card-desc">Packaging and AI infrastructure</p>
             </div>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Docker Containers</span>
-            <span class="skill-tag">Linux / Unix Environment</span>
-            <span class="skill-tag">GitHub Actions CI/CD</span>
-            <span class="skill-tag">Vercel Deployment</span>
-            <span class="skill-tag">Git Version Control</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git &amp; GitHub CI/CD</span>
+            <span class="skill-tag">Colab · Kaggle</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag lab">Terraform</span>
+            <span class="skill-tag lab">Lakehouse</span>
+            <span class="skill-tag lab">Vector feature store</span>
+            <span class="skill-tag lab">Model serving</span>
+            <span class="skill-tag lab">Data governance</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects Showcase -->
-  <section class="projects-section" id="projects">
+  <!-- Experience Timeline -->
+  <section class="experience-section" id="journey">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">// PRODUCTION SYSTEMS</div>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-desc">Real-world applications and architectures engineered for reliability, latency optimization, and autonomy.</p>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="ai">AI & Autonomous Agents</button>
-        <button class="filter-btn" data-filter="systems">Systems & C++</button>
-        <button class="filter-btn" data-filter="automation">Automation & Tools</button>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: NexusAgent -->
-        <div class="project-card" data-category="ai">
-          <div class="project-image-box">
-            <img src="assets/images/project-ai.jpg" alt="Autonomous AI Agent Dashboard" class="project-img">
-            <span class="project-tag-overlay">Autonomous Agents</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">NexusAgent: Multi-Agent Orchestrator</h3>
-            <p class="project-desc">
-              An enterprise-grade autonomous agent framework featuring cyclic graph state machines, dynamic tool dispatching, human-in-the-loop review steps, and comprehensive session persistence.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">LangGraph</span>
-              <span class="tech-pill">FastAPI</span>
-              <span class="tech-pill">PostgreSQL</span>
-              <span class="tech-pill">Docker</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                <span>View Source</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <span style="font-size:0.8rem; color:var(--accent-emerald)">● Production Ready</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: Aether Vector Engine -->
-        <div class="project-card" data-category="ai">
-          <div class="project-image-box">
-            <img src="assets/images/project-vector.jpg" alt="Aether Vector Search UI" class="project-img">
-            <span class="project-tag-overlay">RAG & Vector Search</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Aether: Dense Hybrid RAG Engine</h3>
-            <p class="project-desc">
-              High-throughput retrieval-augmented generation pipeline with hybrid dense/sparse vector scoring, cross-encoder neural reranking, and semantic cluster exploration.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">PyTorch</span>
-              <span class="tech-pill">Qdrant</span>
-              <span class="tech-pill">HuggingFace</span>
-              <span class="tech-pill">FastAPI</span>
-              <span class="tech-pill">Python</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                <span>View Architecture</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <span style="font-size:0.8rem; color:var(--accent-cyan)">● Sub-35ms Latency</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Kestrel Distributed Task Queue -->
-        <div class="project-card" data-category="systems">
-          <div class="project-image-box">
-            <img src="assets/images/project-systems.jpg" alt="Distributed Task Queue Monitoring" class="project-img">
-            <span class="project-tag-overlay">Systems & C++</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Kestrel: High-Throughput Task Queue</h3>
-            <p class="project-desc">
-              Low-latency distributed message broker and asynchronous worker pool implemented in modern C++ with lock-free queues, Redis state backing, and real-time Prometheus telemetry.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">C++20</span>
-              <span class="tech-pill">Redis</span>
-              <span class="tech-pill">Docker</span>
-              <span class="tech-pill">Linux Systems</span>
-              <span class="tech-pill">POSIX</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                <span>View Benchmarks</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <span style="font-size:0.8rem; color:var(--accent-blue)">● 38k+ RPS</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Git Profile Awaken Engine -->
-        <div class="project-card" data-category="automation">
-          <div class="project-image-box" style="background: radial-gradient(circle, #1a243a 0%, #0a0e17 100%); display:flex; align-items:center; justify-content:center;">
-            <div style="text-align:center; padding: 1.5rem;">
-              <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚔️</div>
-              <div style="font-family:var(--font-mono); font-weight:700; color:#38bdf8; font-size:1.1rem;">GIT-PROFILE-AWAKEN</div>
-              <div style="font-size:0.8rem; color:var(--text-dim)">Automated LitRPG System Engine</div>
-            </div>
-            <span class="project-tag-overlay">Automation & CI/CD</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Git Profile Awaken & Analytics</h3>
-            <p class="project-desc">
-              Automated GitHub profile RPG gamification engine transforming commits and pull requests into Hunter stats, quest milestones, and dynamic SVG visual telemetry updated via scheduled Actions.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">GitHub Actions</span>
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">SVG Generation</span>
-              <span class="tech-pill">Git API</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                <span>View GitHub Action</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <span style="font-size:0.8rem; color:var(--accent-emerald)">● Daily Automation</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience & Milestones Timeline -->
-  <section class="experience-section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">// CAREER & EDUCATION</div>
-        <h2 class="section-title">Milestones & Journey</h2>
-        <p class="section-desc">Key milestones in engineering autonomous systems, backends, and algorithmic problem solving.</p>
+        <div class="section-badge">// EXPERIENCE</div>
+        <h2 class="section-title">Experience &amp; education</h2>
       </div>
 
       <div class="timeline">
-        <!-- Milestone 1 -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
-              <h3 class="timeline-role">AI & Software Engineer — Autonomous Agents</h3>
-              <span class="timeline-date">2024 — Present</span>
+              <h3 class="timeline-role">AI Engineer Intern — VinSmart Future (Vingroup)</h3>
+              <span class="timeline-date">08/2026 — 10/2026</span>
             </div>
-            <div class="timeline-place">Independent Research & Project Engineering</div>
+            <div class="timeline-place">GSM · Green &amp; Smart Mobility division</div>
             <p class="timeline-desc">
-              Designing scalable multi-agent systems with human-in-the-loop interfaces, optimizing LLM tool-calling latency, and architecting hybrid vector search pipelines with Qdrant and FastAPI.
+              Contributed to AI and software initiatives for smart-mobility services as part of the Vingroup AI Talent Program.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 2 -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
-              <h3 class="timeline-role">Systems & High-Performance Computing Research</h3>
-              <span class="timeline-date">2023 — 2024</span>
+              <h3 class="timeline-role">Vingroup AI Talent Training Program — Cohort 3</h3>
+              <span class="timeline-date">2026 — 10/2026</span>
             </div>
-            <div class="timeline-place">Systems Development & Core Algorithms</div>
+            <div class="timeline-place">VinUniversity · Track 2: AI &amp; Data Infrastructure</div>
             <p class="timeline-desc">
-              Mastered modern C++ (C++17/C++20), lock-free data structures, asynchronous I/O, POSIX thread pooling, and high-performance network programming on Linux environments.
+              Daily labs on tool-calling agents, embeddings and vector stores, guardrails with human-in-the-loop, Terraform-based cloud AI infrastructure, lakehouse and feature stores, model serving and data governance — 22 lab repos on
+              <a href="https://github.com/truong311203-arch?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 3 -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
-              <h3 class="timeline-role">Software Engineering & Computer Science Foundation</h3>
-              <span class="timeline-date">2021 — 2023</span>
+              <h3 class="timeline-role">B.Sc. Computer Science — HCMUT (VNU-HCM)</h3>
+              <span class="timeline-date">Graduated 11/2025</span>
             </div>
-            <div class="timeline-place">University & Technical Grinding</div>
+            <div class="timeline-place">GPA 3.3/4.0 · TOEIC 840/990</div>
             <p class="timeline-desc">
-              Rigorous grounding in Data Structures, Algorithms, Operating Systems, Computer Architecture, Database Design, and modern web application development.
+              Thesis on motor-imagery classification from EEG signals (97.5/100). Co-author of FA-GPNet in the MIWAI 2025 proceedings (Springer LNAI).
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Software Engineer Intern — Xuan Cuong Technology Trading &amp; Services</h3>
+              <span class="timeline-date">02/2025 — 05/2025</span>
+            </div>
+            <div class="timeline-place">E-commerce web application · team of 2</div>
+            <p class="timeline-desc">
+              Built an e-commerce app with QR bank-transfer payment from requirements to testing: Node.js/Express REST APIs (JWT auth, role-based access, product CRUD, cart, orders), a Dockerized MySQL schema, and a React frontend (Ant Design, TailwindCSS), plus test cases for core user flows.
             </p>
           </div>
         </div>
@@ -534,111 +771,168 @@
     </div>
   </section>
 
-  <!-- Contact & Collaboration Section -->
+  <!-- Interactive CLI Terminal Section -->
+  <section class="terminal-section" id="terminal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">&lt; INTERACTIVE &gt;</div>
+        <h2 class="section-title">Poke around the terminal</h2>
+        <p class="section-desc">A small toy shell with answers about me. Type <code class="inline-cmd">help</code> to start.</p>
+      </div>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-controls">
+            <span class="control-dot red"></span>
+            <span class="control-dot yellow"></span>
+            <span class="control-dot green"></span>
+          </div>
+          <div class="terminal-title">guest@truong311203 — bash</div>
+          <div class="terminal-spacer"></div>
+        </div>
+
+        <div class="terminal-body">
+          <div class="terminal-output" id="terminal-output" aria-live="polite">
+            <p class="terminal-comment">/* Type 'help' to view available commands */</p>
+            <div>
+              <span class="terminal-prompt">guest@truong311203:~$</span>
+              <span>neofetch</span>
+            </div>
+            <pre class="terminal-pre">
+   .---.       NAME: Trần Duy Trường
+  /     \      ROLE: AI/ML engineer (intern, VSF)
+ | () () |     FOCUS: grounded RAG · LLM evaluation
+  \  _  /      DEGREE: BSc CS, HCMUT (2025)
+   `---`       LOCATION: Hanoi, Vietnam
+            </pre>
+          </div>
+
+          <div class="terminal-input-row">
+            <label for="terminal-input" class="terminal-prompt">guest@truong311203:~$</label>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="type 'help', 'projects', 'skills'..." autocomplete="off" spellcheck="false">
+          </div>
+
+          <div class="terminal-hint">
+            Press <kbd>Enter</kbd> to run · <kbd>↑</kbd>/<kbd>↓</kbd> for history · try
+            <code>about</code> <code>projects</code> <code>skills</code> <code>education</code> <code>contact</code> <code>clear</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">// REACH OUT</div>
-        <h2 class="section-title">Let's Build Something High-Impact</h2>
-        <p class="section-desc">Whether you have an ambitious AI project, backend architecture challenge, or collaboration proposal, my inbox is open.</p>
+        <div class="section-badge">// CONTACT</div>
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-desc">I'm looking for an AI/ML Engineer role and happy to talk about RAG, LLM evaluation or applied ML research. Email is the fastest way to reach me.</p>
       </div>
 
       <div class="contact-grid">
-        <!-- Contact Info -->
         <div class="contact-info-card">
-          <h3 class="contact-info-title">Contact Channels</h3>
-          <p class="contact-info-desc">
-            Direct communication lines are monitored daily. Feel free to copy my email or ping me directly on GitHub.
-          </p>
+          <h3 class="contact-info-title">Where to find me</h3>
 
           <div class="contact-detail-item">
             <div class="contact-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg>
             </div>
             <div>
-              <div class="contact-text-label">Email Address</div>
-              <div class="contact-text-value">truong311203@gmail.com</div>
+              <div class="contact-text-label">Email</div>
+              <div class="contact-text-value"><a href="mailto:truong311203@gmail.com">truong311203@gmail.com</a></div>
             </div>
           </div>
 
           <div class="contact-detail-item">
-            <div class="contact-icon" style="background:rgba(99, 102, 241, 0.15); color:var(--accent-indigo)">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <div class="contact-icon contact-icon-indigo">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-github"/></svg>
             </div>
             <div>
-              <div class="contact-text-label">GitHub Handle</div>
-              <div class="contact-text-value">@truong311203-arch</div>
+              <div class="contact-text-label">GitHub — projects</div>
+              <div class="contact-text-value"><a href="https://github.com/tranduytruong12" target="_blank" rel="noopener noreferrer">@tranduytruong12</a></div>
             </div>
           </div>
 
           <div class="contact-detail-item">
-            <div class="contact-icon" style="background:rgba(16, 185, 129, 0.15); color:var(--accent-emerald)">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="contact-icon contact-icon-indigo">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-github"/></svg>
             </div>
             <div>
-              <div class="contact-text-label">Location / Timezone</div>
-              <div class="contact-text-value">Vietnam (UTC+7)</div>
+              <div class="contact-text-label">GitHub — AI20K labs</div>
+              <div class="contact-text-value"><a href="https://github.com/truong311203-arch" target="_blank" rel="noopener noreferrer">@truong311203-arch</a></div>
             </div>
           </div>
 
-          <div style="margin-top: 2rem;">
-            <button class="btn btn-primary btn-sm copy-email-btn" style="width:100%">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-              <span>Copy Email Address</span>
+          <div class="contact-detail-item">
+            <div class="contact-icon contact-icon-emerald">
+              <svg width="20" height="20" aria-hidden="true"><use href="#i-pin"/></svg>
+            </div>
+            <div>
+              <div class="contact-text-label">Location</div>
+              <div class="contact-text-value">Hanoi, Vietnam (UTC+7)</div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <button class="btn btn-primary btn-sm copy-email-btn" type="button">
+              <svg width="14" height="14" aria-hidden="true"><use href="#i-copy"/></svg>
+              <span>Copy email address</span>
             </button>
           </div>
         </div>
 
-        <!-- Interactive Transmission Form -->
         <div class="contact-form-card">
-          <form id="contact-form">
+          <form id="contact-form" novalidate>
             <div class="form-group">
-              <label for="contact-name" class="form-label">Your Name</label>
-              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Morgan" required>
+              <label for="contact-name" class="form-label">Your name</label>
+              <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Alex Morgan" autocomplete="name" required>
             </div>
 
             <div class="form-group">
-              <label for="contact-email" class="form-label">Your Email</label>
-              <input type="email" id="contact-email" class="form-control" placeholder="e.g. alex@company.com" required>
+              <label for="contact-email" class="form-label">Your email</label>
+              <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g. alex@company.com" autocomplete="email" required>
             </div>
 
             <div class="form-group">
-              <label for="contact-subject" class="form-label">Subject / Purpose</label>
-              <input type="text" id="contact-subject" class="form-control" placeholder="Project Collaboration / Inquiries" required>
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" name="subject" class="form-control" placeholder="Role / collaboration / question" required>
             </div>
 
             <div class="form-group">
-              <label for="contact-message" class="form-label">Transmission / Message</label>
-              <textarea id="contact-message" class="form-control" placeholder="Describe your vision or inquiry..." required></textarea>
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" name="message" class="form-control" placeholder="What would you like to talk about?" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;" id="btn-submit-contact">
-              <span>Transmit Message</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-contact">
+              <span>Open in my email app</span>
+              <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
             </button>
+            <p class="form-note" id="form-note">This opens a pre-filled draft in your email client — nothing is sent or stored by this site.</p>
           </form>
         </div>
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <div>
-        © 2026 <strong>Trần Duy Trường</strong> (truong311203-arch). Crafted with high precision.
+        © 2026 <strong>Trần Duy Trường</strong>. Hand-written HTML, CSS and JavaScript — no frameworks.
       </div>
-      <div class="footer-vercel-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
-        <span>Vercel Optimized & Continuous Deploy</span>
+      <div class="footer-links">
+        <a href="https://github.com/tranduytruong12/RAG-multi-agents-system" target="_blank" rel="noopener noreferrer">Multi-agent RAG source</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/truong311203-arch/portfolio" target="_blank" rel="noopener noreferrer">Source of this site</a>
       </div>
     </div>
   </footer>
 
   <!-- Toast Notification -->
-  <div class="toast-notice" id="toast">Email copied to clipboard!</div>
+  <div class="toast-notice" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
