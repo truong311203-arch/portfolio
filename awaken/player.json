@@ -1,27 +1,27 @@
 {
   "login": "truong311203-arch",
-  "level": 9,
+  "level": 3,
   "overall": "C",
-  "overallPercentile": 0.6623970397224503,
+  "overallPercentile": 0.6396117553047228,
   "layout": "default",
   "class": {
-    "name": "Grand Magus",
-    "element": "Arcane",
-    "from": "Python"
+    "name": "Illusionist",
+    "element": "Wind",
+    "from": "HTML"
   },
   "title": "Night Owl",
   "stats": [
     {
       "code": "STR",
-      "value": 8,
+      "value": 18,
       "rank": "E",
-      "percentile": 0.1577504689141393
+      "percentile": 0.280549306411617
     },
     {
       "code": "AGI",
-      "value": 56,
-      "rank": "S",
-      "percentile": 0.965927584594461
+      "value": 3,
+      "rank": "C",
+      "percentile": 0.7028245329524255
     },
     {
       "code": "INT",
@@ -31,9 +31,9 @@
     },
     {
       "code": "VIT",
-      "value": 2,
-      "rank": "E",
-      "percentile": 0.35265963279786033
+      "value": 3,
+      "rank": "D",
+      "percentile": 0.507696117492914
     },
     {
       "code": "LUK",
@@ -49,6 +49,20 @@
     }
   ],
   "events": [
+    {
+      "kind": "stat",
+      "subject": "AGI",
+      "from": "S",
+      "to": "C",
+      "at": "2026-10-12T23:35:18.045Z"
+    },
+    {
+      "kind": "stat",
+      "subject": "VIT",
+      "from": "E",
+      "to": "D",
+      "at": "2026-10-12T23:35:18.045Z"
+    },
     {
       "kind": "level",
       "subject": "Level",
@@ -90,42 +104,28 @@
       "from": "1",
       "to": "2",
       "at": "2026-10-11T15:55:53.629Z"
-    },
-    {
-      "kind": "achievement",
-      "subject": "yolo",
-      "from": "1",
-      "to": "2",
-      "at": "2026-10-11T15:55:53.629Z"
-    },
-    {
-      "kind": "achievement",
-      "subject": "unbroken",
-      "from": "0",
-      "to": "1",
-      "at": "2026-10-11T15:55:53.629Z"
     }
   ],
   "achievements": [
     {
       "id": "pull-shark",
-      "tier": 2,
-      "value": 45
+      "tier": 1,
+      "value": 3
     },
     {
       "id": "quickdraw",
-      "tier": 2,
-      "value": 12
+      "tier": 1,
+      "value": 4
     },
     {
       "id": "yolo",
-      "tier": 2,
-      "value": 21
+      "tier": 1,
+      "value": 3
     },
     {
       "id": "relentless",
       "tier": 0,
-      "value": 8
+      "value": 18
     },
     {
       "id": "unbroken",
@@ -145,22 +145,22 @@
     {
       "id": "weekend-warrior",
       "tier": 2,
-      "value": 30
+      "value": 31
     },
     {
       "id": "gate-opener",
       "tier": 2,
-      "value": 29
+      "value": 30
     },
     {
       "id": "raider",
-      "tier": 2,
-      "value": 43
+      "tier": 1,
+      "value": 1
     },
     {
       "id": "flawless",
-      "tier": 1,
-      "value": 80
+      "tier": 0,
+      "value": 0
     },
     {
       "id": "healer",
@@ -170,7 +170,7 @@
     {
       "id": "polyglot",
       "tier": 1,
-      "value": 4
+      "value": 3
     },
     {
       "id": "star-collector",
@@ -200,22 +200,22 @@
     {
       "id": "diligent",
       "tier": 1,
-      "value": 51
+      "value": 52
     },
     {
       "id": "daily-grinder",
       "tier": 0,
-      "value": 0
+      "value": 1
     },
     {
       "id": "perfect-week",
       "tier": 0,
-      "value": 0
+      "value": 1
     },
     {
       "id": "quest-hunter",
       "tier": 0,
-      "value": 0
+      "value": 3
     },
     {
       "id": "boss-slayer",
@@ -230,24 +230,33 @@
     {
       "id": "collector",
       "tier": 0,
-      "value": 0
+      "value": 3
     }
   ],
   "quests": {
     "days": [
+      {
+        "date": "2026-10-12",
+        "cleared": 3,
+        "total": 3
+      },
       {
         "date": "2026-10-10",
         "cleared": 0,
         "total": 3
       }
     ],
-    "perfectDays": 0,
-    "run": 0,
-    "bestRun": 0,
-    "questsDone": 0,
+    "perfectDays": 1,
+    "run": 1,
+    "bestRun": 1,
+    "questsDone": 3,
     "bosses": [],
     "escapes": 0,
-    "kinds": []
+    "kinds": [
+      "contribute",
+      "average",
+      "three"
+    ]
   },
-  "syncedAt": "2026-10-11T15:55:53.629Z"
+  "syncedAt": "2026-10-12T23:35:18.045Z"
 }
