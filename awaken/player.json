@@ -2,7 +2,7 @@
   "login": "truong311203-arch",
   "level": 3,
   "overall": "C",
-  "overallPercentile": 0.6396117553047228,
+  "overallPercentile": 0.6414933695454295,
   "layout": "default",
   "class": {
     "name": "Illusionist",
@@ -13,9 +13,9 @@
   "stats": [
     {
       "code": "STR",
-      "value": 18,
+      "value": 19,
       "rank": "E",
-      "percentile": 0.280549306411617
+      "percentile": 0.2909308510651043
     },
     {
       "code": "AGI",
@@ -125,7 +125,7 @@
     {
       "id": "relentless",
       "tier": 0,
-      "value": 18
+      "value": 19
     },
     {
       "id": "unbroken",
@@ -200,22 +200,22 @@
     {
       "id": "diligent",
       "tier": 1,
-      "value": 52
+      "value": 53
     },
     {
       "id": "daily-grinder",
       "tier": 0,
-      "value": 1
+      "value": 2
     },
     {
       "id": "perfect-week",
       "tier": 0,
-      "value": 1
+      "value": 2
     },
     {
       "id": "quest-hunter",
       "tier": 0,
-      "value": 3
+      "value": 6
     },
     {
       "id": "boss-slayer",
@@ -236,6 +236,11 @@
   "quests": {
     "days": [
       {
+        "date": "2026-10-13",
+        "cleared": 3,
+        "total": 3
+      },
+      {
         "date": "2026-10-12",
         "cleared": 3,
         "total": 3
@@ -246,10 +251,10 @@
         "total": 3
       }
     ],
-    "perfectDays": 1,
-    "run": 1,
-    "bestRun": 1,
-    "questsDone": 3,
+    "perfectDays": 2,
+    "run": 2,
+    "bestRun": 2,
+    "questsDone": 6,
     "bosses": [],
     "escapes": 0,
     "kinds": [
@@ -258,5 +263,5 @@
       "three"
     ]
   },
-  "syncedAt": "2026-10-12T23:35:18.045Z"
+  "syncedAt": "2026-10-13T21:48:13.622Z"
 }
