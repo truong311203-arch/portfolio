@@ -69,41 +69,6 @@
       "from": "E",
       "to": "D",
       "at": "2026-10-12T23:35:18.045Z"
-    },
-    {
-      "kind": "level",
-      "subject": "Level",
-      "from": "2",
-      "to": "9",
-      "at": "2026-10-11T15:55:53.629Z"
-    },
-    {
-      "kind": "overall",
-      "subject": "Overall rank",
-      "from": "E",
-      "to": "C",
-      "at": "2026-10-11T15:55:53.629Z"
-    },
-    {
-      "kind": "stat",
-      "subject": "AGI",
-      "from": "C",
-      "to": "S",
-      "at": "2026-10-11T15:55:53.629Z"
-    },
-    {
-      "kind": "stat",
-      "subject": "INT",
-      "from": "E",
-      "to": "B",
-      "at": "2026-10-11T15:55:53.629Z"
-    },
-    {
-      "kind": "achievement",
-      "subject": "pull-shark",
-      "from": "0",
-      "to": "2",
-      "at": "2026-10-11T15:55:53.629Z"
     }
   ],
   "achievements": [
@@ -215,7 +180,7 @@
     {
       "id": "quest-hunter",
       "tier": 0,
-      "value": 10
+      "value": 11
     },
     {
       "id": "boss-slayer",
@@ -235,6 +200,11 @@
   ],
   "quests": {
     "days": [
+      {
+        "date": "2026-10-18",
+        "cleared": 1,
+        "total": 3
+      },
       {
         "date": "2026-10-17",
         "cleared": 1,
@@ -274,7 +244,7 @@
     "perfectDays": 2,
     "run": 0,
     "bestRun": 2,
-    "questsDone": 10,
+    "questsDone": 11,
     "bosses": [],
     "escapes": 0,
     "kinds": [
@@ -285,5 +255,5 @@
       "mp"
     ]
   },
-  "syncedAt": "2026-10-17T19:15:33.790Z"
+  "syncedAt": "2026-10-18T19:23:27.165Z"
 }
