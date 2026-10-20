@@ -83,14 +83,14 @@ Every number on the site comes from the CV or from a project's own README/evalua
 
 <p align="center">
 <picture><source media="(prefers-color-scheme: dark)" srcset="awaken/oracle-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/oracle-light.svg"><img src="awaken/oracle-dark.svg" width="49%" alt="truong311203-arch: oracle scroll"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="awaken/daily-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/daily-light.svg"><img src="awaken/daily-dark.svg" width="49%" alt="truong311203-arch: penalty zone"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="awaken/daily-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/daily-light.svg"><img src="awaken/daily-dark.svg" width="49%" alt="truong311203-arch: daily quest"></picture>
 </p>
 
 <p align="center">
 <picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-str-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-str-light.svg"><img src="awaken/rune-str-dark.svg" width="24%" alt="STR: rank E"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-agi-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-agi-light.svg"><img src="awaken/rune-agi-dark.svg" width="24%" alt="AGI: rank C"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-int-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-int-light.svg"><img src="awaken/rune-int-dark.svg" width="24%" alt="INT: rank B"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-vit-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-vit-light.svg"><img src="awaken/rune-vit-dark.svg" width="24%" alt="VIT: rank D"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-vit-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-vit-light.svg"><img src="awaken/rune-vit-dark.svg" width="24%" alt="VIT: rank C"></picture>
 </p>
 
 <p align="center">
