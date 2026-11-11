@@ -95,6 +95,6 @@ Every number on the site comes from the CV or from a project's own README/evalua
 
 <p align="center">
 <picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-luk-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-luk-light.svg"><img src="awaken/rune-luk-dark.svg" width="24%" alt="LUK: rank E"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-cha-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-cha-light.svg"><img src="awaken/rune-cha-dark.svg" width="24%" alt="CHA: rank C"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="awaken/rune-cha-dark.svg"><source media="(prefers-color-scheme: light)" srcset="awaken/rune-cha-light.svg"><img src="awaken/rune-cha-dark.svg" width="24%" alt="CHA: rank E"></picture>
 </p>
 <!-- AWAKEN:END -->
