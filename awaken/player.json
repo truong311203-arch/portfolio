@@ -48,36 +48,7 @@
       "percentile": 0.6689367771328458
     }
   ],
-  "events": [
-    {
-      "kind": "overall",
-      "subject": "Overall rank",
-      "from": "C",
-      "to": "B",
-      "at": "2026-11-12T22:40:55.292Z"
-    },
-    {
-      "kind": "stat",
-      "subject": "CHA",
-      "from": "E",
-      "to": "C",
-      "at": "2026-11-12T22:40:55.292Z"
-    },
-    {
-      "kind": "overall",
-      "subject": "Overall rank",
-      "from": "B",
-      "to": "C",
-      "at": "2026-11-11T23:25:28.227Z"
-    },
-    {
-      "kind": "stat",
-      "subject": "CHA",
-      "from": "C",
-      "to": "E",
-      "at": "2026-11-11T23:25:28.227Z"
-    }
-  ],
+  "events": [],
   "achievements": [
     {
       "id": "pull-shark",
@@ -207,6 +178,11 @@
   ],
   "quests": {
     "days": [
+      {
+        "date": "2026-11-19",
+        "cleared": 0,
+        "total": 3
+      },
       {
         "date": "2026-11-18",
         "cleared": 0,
@@ -420,5 +396,5 @@
       "streak"
     ]
   },
-  "syncedAt": "2026-11-18T23:20:48.576Z"
+  "syncedAt": "2026-11-19T23:30:01.885Z"
 }
