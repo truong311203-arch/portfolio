@@ -1,21 +1,21 @@
 {
   "login": "truong311203-arch",
-  "level": 3,
+  "level": 4,
   "overall": "B",
-  "overallPercentile": 0.7517208254338502,
+  "overallPercentile": 0.7833384899094225,
   "layout": "default",
   "class": {
-    "name": "Blade Master",
-    "element": "Lightning",
-    "from": "TypeScript"
+    "name": "Grand Magus",
+    "element": "Arcane",
+    "from": "Python"
   },
   "title": "Night Owl",
   "stats": [
     {
       "code": "STR",
-      "value": 20,
-      "rank": "E",
-      "percentile": 0.30101599069129226
+      "value": 69,
+      "rank": "D",
+      "percentile": 0.5895141719894662
     },
     {
       "code": "AGI",
@@ -31,9 +31,9 @@
     },
     {
       "code": "VIT",
-      "value": 4,
+      "value": 5,
       "rank": "C",
-      "percentile": 0.6331483952649493
+      "percentile": 0.728198512785954
     },
     {
       "code": "LUK",
@@ -48,7 +48,29 @@
       "percentile": 0.6689367771328458
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "kind": "level",
+      "subject": "Level",
+      "from": "3",
+      "to": "4",
+      "at": "2026-11-21T22:08:40.519Z"
+    },
+    {
+      "kind": "stat",
+      "subject": "STR",
+      "from": "E",
+      "to": "D",
+      "at": "2026-11-21T22:08:40.519Z"
+    },
+    {
+      "kind": "achievement",
+      "subject": "polyglot",
+      "from": "1",
+      "to": "2",
+      "at": "2026-11-21T22:08:40.519Z"
+    }
+  ],
   "achievements": [
     {
       "id": "pull-shark",
@@ -68,7 +90,7 @@
     {
       "id": "relentless",
       "tier": 0,
-      "value": 20
+      "value": 69
     },
     {
       "id": "unbroken",
@@ -78,7 +100,7 @@
     {
       "id": "night-owl",
       "tier": 3,
-      "value": 95
+      "value": 62
     },
     {
       "id": "early-bird",
@@ -93,7 +115,7 @@
     {
       "id": "gate-opener",
       "tier": 2,
-      "value": 32
+      "value": 33
     },
     {
       "id": "raider",
@@ -112,8 +134,8 @@
     },
     {
       "id": "polyglot",
-      "tier": 1,
-      "value": 4
+      "tier": 2,
+      "value": 5
     },
     {
       "id": "star-collector",
@@ -178,6 +200,11 @@
   ],
   "quests": {
     "days": [
+      {
+        "date": "2026-11-21",
+        "cleared": 0,
+        "total": 3
+      },
       {
         "date": "2026-11-20",
         "cleared": 0,
@@ -401,5 +428,5 @@
       "streak"
     ]
   },
-  "syncedAt": "2026-11-20T23:02:03.210Z"
+  "syncedAt": "2026-11-21T22:08:40.519Z"
 }
