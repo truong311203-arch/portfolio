@@ -2,7 +2,7 @@
   "login": "truong311203-arch",
   "level": 4,
   "overall": "B",
-  "overallPercentile": 0.7870684091893432,
+  "overallPercentile": 0.7872822762900625,
   "layout": "default",
   "class": {
     "name": "Grand Magus",
@@ -13,9 +13,9 @@
   "stats": [
     {
       "code": "STR",
-      "value": 70,
+      "value": 71,
       "rank": "D",
-      "percentile": 0.5930166911402132
+      "percentile": 0.5964641287983949
     },
     {
       "code": "AGI",
@@ -97,7 +97,7 @@
     {
       "id": "relentless",
       "tier": 0,
-      "value": 70
+      "value": 71
     },
     {
       "id": "unbroken",
@@ -172,7 +172,7 @@
     {
       "id": "diligent",
       "tier": 1,
-      "value": 66
+      "value": 67
     },
     {
       "id": "daily-grinder",
@@ -207,6 +207,11 @@
   ],
   "quests": {
     "days": [
+      {
+        "date": "2026-11-26",
+        "cleared": 0,
+        "total": 3
+      },
       {
         "date": "2026-11-25",
         "cleared": 2,
@@ -455,5 +460,5 @@
       "streak"
     ]
   },
-  "syncedAt": "2026-11-26T00:56:43.949Z"
+  "syncedAt": "2026-11-27T00:59:24.504Z"
 }
